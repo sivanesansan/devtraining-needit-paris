@@ -1,0 +1,1760 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="global" table="sys_hub_flow">
+    <sys_hub_flow action="INSERT_OR_UPDATE">
+        <access>public</access>
+        <acls/>
+        <active>true</active>
+        <annotation/>
+        <callable_by_client_api>false</callable_by_client_api>
+        <category/>
+        <compiler_build>glide-paris-06-24-2020__patch1-hotfix3-09-23-2020</compiler_build>
+        <copied_from/>
+        <copied_from_name/>
+        <description>Aggregates daily savings into monthly savings table</description>
+        <internal_name>my_monthly_savings_aggregate</internal_name>
+        <label_cache>[{"name":"0944b012-6c64-4c3b-9db7-6cc05f911f15.table_name","label":"1➛My Daily Savings Table","reference":"x_58872_needit_my_daily_savings","reference_display":"My Daily Savings","type":"table_name","base_type":"table_name","attributes":{"element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper"}},{"name":"0944b012-6c64-4c3b-9db7-6cc05f911f15.record","label":"1➛My Daily Savings Record","reference":"x_58872_needit_my_daily_savings","reference_display":"My Daily Savings","type":"reference","base_type":"reference","attributes":{"element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper"}},{"name":"Created or Updated_1.current.number","label":"Trigger➛My Daily Savings Record➛Number","reference":"","reference_display":"Number","type":"string","base_type":"string","parent_table_name":"x_58872_needit_my_daily_savings","column_name":"number"},{"name":"Created or Updated_1.current.day","label":"Trigger➛My Daily Savings Record➛Day","reference":"","reference_display":"Day","type":"glide_date","base_type":"glide_date","parent_table_name":"x_58872_needit_my_daily_savings","column_name":"day"},{"name":"Created or Updated_1.current.saving","label":"Trigger➛My Daily Savings Record➛Saving","reference":"","reference_display":"Saving","type":"string","base_type":"string","parent_table_name":"x_58872_needit_my_daily_savings","column_name":"saving"},{"name":"10eccc0e-1eb6-4667-aa5f-d5d9fa1c6a96.record","label":"1➛My Monthly Savings Record","reference":"x_58872_needit_my_monthly_savings","reference_display":"My Monthly Savings Record","type":"reference","base_type":"reference","attributes":{"uiType":"document_id","uiTypeLabel":"true","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper"}},{"name":"10eccc0e-1eb6-4667-aa5f-d5d9fa1c6a96.table_name","label":"1➛My Monthly Savings Table","reference":"x_58872_needit_my_monthly_savings","reference_display":"My Monthly Savings Table","type":"table_name","base_type":"table_name","attributes":{"uiType":"table_name","uiTypeLabel":"true","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper"}},{"name":"10eccc0e-1eb6-4667-aa5f-d5d9fa1c6a96.status","label":"1➛Status","reference_display":"Status","type":"choice","base_type":"choice","attributes":{"uiType":"choice","uiTypeLabel":"true","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper"}},{"name":"10eccc0e-1eb6-4667-aa5f-d5d9fa1c6a96.error_message","label":"1➛Error Message","reference_display":"Error Message","type":"string","base_type":"string","attributes":{"uiType":"string","uiTypeLabel":"true","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper"}},{"name":"49864385-f8c4-4c12-9513-040868ae79e6.Record","label":"1➛Record","reference_display":"Record","type":"document_id","base_type":"document_id","attributes":{"element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper"}},{"name":"49864385-f8c4-4c12-9513-040868ae79e6.Table","label":"1➛Table","reference_display":"Table","type":"table_name","base_type":"table_name","attributes":{"element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper"}},{"name":"49864385-f8c4-4c12-9513-040868ae79e6.status","label":"1➛Status","reference_display":"Status","type":"choice","base_type":"choice","attributes":{"uiTypeLabel":"Choice","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper","uiType":"choice","uiUniqueId":"5e478657-3a84-4a60-a92b-d3e80005ad34"}},{"name":"49864385-f8c4-4c12-9513-040868ae79e6.error_message","label":"1➛Error Message","reference_display":"Error Message","type":"string","base_type":"string","attributes":{"uiTypeLabel":"String","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper","pwd2droppable":"true","uiType":"string","uiUniqueId":"87687532-9e3d-4497-a88e-90f45bfb9adb"}},{"name":"4a47ea31-306c-4aeb-ab6a-bd427013aa38.record","label":"2➛My Monthly Savings Record","reference":"x_58872_needit_my_monthly_savings","reference_display":"My Monthly Savings Record","type":"reference","base_type":"reference","attributes":{"uiType":"document_id","uiTypeLabel":"true","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper"}},{"name":"4a47ea31-306c-4aeb-ab6a-bd427013aa38.table_name","label":"2➛My Monthly Savings Table","reference":"x_58872_needit_my_monthly_savings","reference_display":"My Monthly Savings Table","type":"table_name","base_type":"table_name","attributes":{"uiType":"table_name","uiTypeLabel":"true","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper"}},{"name":"4a47ea31-306c-4aeb-ab6a-bd427013aa38.status","label":"2➛Status","reference_display":"Status","type":"choice","base_type":"choice","attributes":{"uiType":"choice","uiTypeLabel":"true","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper"}},{"name":"4a47ea31-306c-4aeb-ab6a-bd427013aa38.error_message","label":"2➛Error Message","reference_display":"Error Message","type":"string","base_type":"string","attributes":{"uiType":"string","uiTypeLabel":"true","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper"}}]</label_cache>
+        <latest_snapshot>a62a5f172f52201022509facf699b67a</latest_snapshot>
+        <master_snapshot>c6b9d7172f52201022509facf699b607</master_snapshot>
+        <name>My Monthly Savings Aggregate</name>
+        <natlang/>
+        <outputs/>
+        <remote_trigger_id>66b9d7172f52201022509facf699b661</remote_trigger_id>
+        <run_as>system</run_as>
+        <run_with_roles/>
+        <sc_callable>false</sc_callable>
+        <show_draft_actions>false</show_draft_actions>
+        <show_triggered_flows>false</show_triggered_flows>
+        <status>draft</status>
+        <sys_class_name>sys_hub_flow</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2021-02-18 17:34:46</sys_created_on>
+        <sys_domain>global</sys_domain>
+        <sys_domain_path>/</sys_domain_path>
+        <sys_id>d365d3132f52201022509facf699b607</sys_id>
+        <sys_mod_count>6</sys_mod_count>
+        <sys_name>My Monthly Savings Aggregate</sys_name>
+        <sys_overrides/>
+        <sys_package display_value="NeedIt" source="x_58872_needit">6ead8e780f603200cd674f8ce1050ed1</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="NeedIt">6ead8e780f603200cd674f8ce1050ed1</sys_scope>
+        <sys_update_name>sys_hub_flow_d365d3132f52201022509facf699b607</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2021-02-19 04:47:33</sys_updated_on>
+        <type>flow</type>
+    </sys_hub_flow>
+    <sys_translated_text action="delete_multiple" query="documentkey=d365d3132f52201022509facf699b607"/>
+    <sys_variable_value action="delete_multiple" query="document_key=d365d3132f52201022509facf699b607"/>
+    <sys_flow_record_trigger action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <condition table="x_58872_needit_my_daily_savings">^EQ<item endquery="true" field="" goto="false" newquery="false" operator="=" or="false" value=""/>
+        </condition>
+        <name/>
+        <on_delete>false</on_delete>
+        <on_insert>true</on_insert>
+        <on_update>true</on_update>
+        <run_flow_in>background</run_flow_in>
+        <run_on_extended>false</run_on_extended>
+        <run_when_setting>both</run_when_setting>
+        <run_when_user_list/>
+        <run_when_user_setting>any</run_when_user_setting>
+        <sys_class_name>sys_flow_record_trigger</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2021-02-18 17:53:33</sys_created_on>
+        <sys_domain>global</sys_domain>
+        <sys_domain_path>/</sys_domain_path>
+        <sys_id>66b9d7172f52201022509facf699b661</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_overrides/>
+        <sys_scope display_value="NeedIt">6ead8e780f603200cd674f8ce1050ed1</sys_scope>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2021-02-18 17:53:33</sys_updated_on>
+        <table>x_58872_needit_my_daily_savings</table>
+    </sys_flow_record_trigger>
+    <sys_trigger_runner_mapping action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <data>{"table":"sys_trigger_runner_mapping","id":"62b9d7172f52201022509facf699b662","name":"trigger_runner","type":"java.util.Collections$UnmodifiableMap"}</data>
+        <identifier>d365d3132f52201022509facf699b607</identifier>
+        <runner>FDTriggerRunner</runner>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2021-02-18 17:53:33</sys_created_on>
+        <sys_id>62b9d7172f52201022509facf699b662</sys_id>
+        <sys_mod_count>1</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2021-02-18 17:53:33</sys_updated_on>
+        <trigger display_value="">66b9d7172f52201022509facf699b661</trigger>
+    </sys_trigger_runner_mapping>
+    <sys_json_chunk action="INSERT_OR_UPDATE">
+        <data>H4sIAAAAAAAAAGXLWwqAIBBA0b3MdytwKxGD5fggGUFHLKK99yAo6Pce7ga5MtqYGgYGBaOeZpdTZQPdTc0TYy2UMYYioPrh0wuJBHbXl8T/jpc1r48mRlqE2JA5u9WxEOwH5v2lw4YAAAA=</data>
+        <document_id>62b9d7172f52201022509facf699b662</document_id>
+        <field>trigger_runner</field>
+        <length>144</length>
+        <position>0</position>
+        <source_table>sys_trigger_runner_mapping</source_table>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2021-02-18 17:53:33</sys_created_on>
+        <sys_id>6ab9d7172f52201022509facf699b662</sys_id>
+    </sys_json_chunk>
+    <sys_trigger_runner_mapping action="delete_multiple" query="identifier=d365d3132f52201022509facf699b607^sys_idNOT IN62b9d7172f52201022509facf699b662"/>
+    <sys_hub_flow_component action="delete_multiple" query="flow=d365d3132f52201022509facf699b607^sys_idNOT IN1e6fa1232fd6201022509facf699b6e7,566fa1232fd6201022509facf699b6ef"/>
+    <sys_hub_action_instance action="INSERT_OR_UPDATE">
+        <action_inputs/>
+        <action_inputs/>
+        <action_type display_value="Look Up Record">9d09f99587003300663ca1bb36cb0ba3</action_type>
+        <action_type_parent/>
+        <comment/>
+        <compiled_snapshot/>
+        <display_text/>
+        <flow display_value="My Monthly Savings Aggregate">d365d3132f52201022509facf699b607</flow>
+        <order>1</order>
+        <parent_ui_id/>
+        <sys_class_name>sys_hub_action_instance</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2021-02-19 04:47:32</sys_created_on>
+        <sys_id>1e6fa1232fd6201022509facf699b6e7</sys_id>
+        <sys_mod_count>2</sys_mod_count>
+        <sys_scope display_value="NeedIt">6ead8e780f603200cd674f8ce1050ed1</sys_scope>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2021-02-19 04:47:32</sys_updated_on>
+        <ui_id>49864385-f8c4-4c12-9513-040868ae79e6</ui_id>
+    </sys_hub_action_instance>
+    <sys_variable_value action="delete_multiple" query="document_key=1e6fa1232fd6201022509facf699b6e7"/>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>sys_hub_action_instance</document>
+        <document_key>1e6fa1232fd6201022509facf699b6e7</document_key>
+        <order>0</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2021-02-19 04:47:32</sys_created_on>
+        <sys_id>166fa1232fd6201022509facf699b6eb</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2021-02-19 04:47:32</sys_updated_on>
+        <value>x_58872_needit_my_monthly_savings</value>
+        <variable display_value="">d909f99587003300663ca1bb36cb0ba4</variable>
+    </sys_variable_value>
+    <sys_element_mapping action="delete_multiple" query="id=1e6fa1232fd6201022509facf699b6e7"/>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>conditions</field>
+        <id>1e6fa1232fd6201022509facf699b6e7</id>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2021-02-19 04:47:32</sys_created_on>
+        <sys_id>da6fa1232fd6201022509facf699b6ea</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2021-02-19 04:47:32</sys_updated_on>
+        <table>var__m_sys_hub_action_input_9d09f99587003300663ca1bb36cb0ba3</table>
+        <value>yearLIKE{{Created or Updated_1.current.day}}</value>
+    </sys_element_mapping>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>table</field>
+        <id>1e6fa1232fd6201022509facf699b6e7</id>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2021-02-19 04:47:32</sys_created_on>
+        <sys_id>926fa1232fd6201022509facf699b6eb</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2021-02-19 04:47:32</sys_updated_on>
+        <table>var__m_sys_hub_action_input_9d09f99587003300663ca1bb36cb0ba3</table>
+        <value/>
+    </sys_element_mapping>
+    <sys_hub_action_instance action="INSERT_OR_UPDATE">
+        <action_inputs/>
+        <action_inputs/>
+        <action_type display_value="Create or Update Record">ab575ae253b3230034c6ddeeff7b12f1</action_type>
+        <action_type_parent/>
+        <comment/>
+        <compiled_snapshot>ab575ae253b3230034c6ddeeff7b12f1</compiled_snapshot>
+        <display_text/>
+        <flow display_value="My Monthly Savings Aggregate">d365d3132f52201022509facf699b607</flow>
+        <order>2</order>
+        <parent_ui_id/>
+        <sys_class_name>sys_hub_action_instance</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2021-02-19 04:47:32</sys_created_on>
+        <sys_id>566fa1232fd6201022509facf699b6ef</sys_id>
+        <sys_mod_count>2</sys_mod_count>
+        <sys_scope display_value="NeedIt">6ead8e780f603200cd674f8ce1050ed1</sys_scope>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2021-02-19 04:47:32</sys_updated_on>
+        <ui_id>4a47ea31-306c-4aeb-ab6a-bd427013aa38</ui_id>
+    </sys_hub_action_instance>
+    <sys_variable_value action="delete_multiple" query="document_key=566fa1232fd6201022509facf699b6ef"/>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>sys_hub_action_instance</document>
+        <document_key>566fa1232fd6201022509facf699b6ef</document_key>
+        <order>0</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2021-02-19 04:47:32</sys_created_on>
+        <sys_id>d66fa1232fd6201022509facf699b6fd</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2021-02-19 04:47:32</sys_updated_on>
+        <value>x_58872_needit_my_monthly_savings</value>
+        <variable display_value="">27575ae253b3230034c6ddeeff7b12f4</variable>
+    </sys_variable_value>
+    <sys_element_mapping action="delete_multiple" query="id=566fa1232fd6201022509facf699b6ef"/>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>fields</field>
+        <id>566fa1232fd6201022509facf699b6ef</id>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2021-02-19 04:47:32</sys_created_on>
+        <sys_id>926fa1232fd6201022509facf699b6fd</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2021-02-19 04:47:32</sys_updated_on>
+        <table>var__m_sys_hub_action_input_ab575ae253b3230034c6ddeeff7b12f1</table>
+        <value>year={{fd_transform:e7dcd575-5530-4fce-ace7-b1255033c81c}}^month={{fd_transform:ce383a10-1767-4e3c-9373-705c0216c407}}^savings={{Created or Updated_1.current.saving}}</value>
+    </sys_element_mapping>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>table_name</field>
+        <id>566fa1232fd6201022509facf699b6ef</id>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2021-02-19 04:47:32</sys_created_on>
+        <sys_id>566fa1232fd6201022509facf699b6fd</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2021-02-19 04:47:32</sys_updated_on>
+        <table>var__m_sys_hub_action_input_ab575ae253b3230034c6ddeeff7b12f1</table>
+        <value/>
+    </sys_element_mapping>
+    <sys_hub_trigger_instance action="delete_multiple" query="flow=d365d3132f52201022509facf699b607^sys_idNOT IN87b51f532f52201022509facf699b696"/>
+    <sys_hub_trigger_instance action="INSERT_OR_UPDATE">
+        <comment/>
+        <display_text/>
+        <flow display_value="My Monthly Savings Aggregate">d365d3132f52201022509facf699b607</flow>
+        <name>Created or Updated</name>
+        <remote_sys_id/>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2021-02-18 17:36:07</sys_created_on>
+        <sys_id>87b51f532f52201022509facf699b696</sys_id>
+        <sys_mod_count>6</sys_mod_count>
+        <sys_scope/>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2021-02-19 04:47:32</sys_updated_on>
+        <trigger_definition display_value="Created or Updated">a45d9180c32222002841b63b12d3aea7</trigger_definition>
+        <trigger_inputs/>
+        <trigger_outputs/>
+        <trigger_type>record_create_or_update</trigger_type>
+    </sys_hub_trigger_instance>
+    <sys_variable_value action="delete_multiple" query="document_key=87b51f532f52201022509facf699b696"/>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>sys_hub_trigger_instance</document>
+        <document_key>87b51f532f52201022509facf699b696</document_key>
+        <order>100</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2021-02-18 17:36:07</sys_created_on>
+        <sys_id>5bb51f532f52201022509facf699b697</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2021-02-18 17:36:07</sys_updated_on>
+        <value>^EQ</value>
+        <variable display_value="">707dd180c32222002841b63b12d3aecb</variable>
+    </sys_variable_value>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>sys_hub_trigger_instance</document>
+        <document_key>87b51f532f52201022509facf699b696</document_key>
+        <order>1</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2021-02-18 17:36:07</sys_created_on>
+        <sys_id>d3b51f532f52201022509facf699b698</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2021-02-18 17:36:07</sys_updated_on>
+        <value>x_58872_needit_my_daily_savings</value>
+        <variable display_value="">cf1e1980c32222002841b63b12d3aea0</variable>
+    </sys_variable_value>
+    <sys_flow_cat_variable_model action="delete_multiple" query="id=d365d3132f52201022509facf699b607^sys_idNOT INdf65d3132f52201022509facf699b608"/>
+    <sys_flow_cat_variable_model action="INSERT_OR_UPDATE">
+        <id>d365d3132f52201022509facf699b607</id>
+        <name>My Monthly Savings Aggregate</name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2021-02-18 17:34:46</sys_created_on>
+        <sys_id>df65d3132f52201022509facf699b608</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_scope/>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2021-02-18 17:34:46</sys_updated_on>
+    </sys_flow_cat_variable_model>
+    <sys_hub_flow_input action="delete_multiple" query="model=d365d3132f52201022509facf699b607^sys_idNOT IN03b51f532f52201022509facf699b652,0bb51f532f52201022509facf699b658,0bb51f532f52201022509facf699b68f"/>
+    <sys_hub_flow_input action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <array>false</array>
+        <array_denormalized>false</array_denormalized>
+        <attributes>element_mapping_provider=com.glide.flow_design.action.data.FlowDesignVariableMapper,uiType=document_id,uiTypeLabel=Document ID</attributes>
+        <audit>false</audit>
+        <calculation><![CDATA[(function calculatedFieldValue(current) {
+
+	// Add your code here
+	return '';  // return the calculated value
+
+})(current);]]></calculation>
+        <choice/>
+        <choice_field/>
+        <choice_table/>
+        <column_label/>
+        <comments/>
+        <create_roles/>
+        <default_value/>
+        <defaultsort/>
+        <delete_roles/>
+        <dependent>table_name</dependent>
+        <dependent_on_field>table_name</dependent_on_field>
+        <display>false</display>
+        <dynamic_creation>false</dynamic_creation>
+        <dynamic_creation_script/>
+        <dynamic_default_value/>
+        <dynamic_ref_qual/>
+        <element>current</element>
+        <element_reference>false</element_reference>
+        <foreign_database/>
+        <function_definition/>
+        <function_field>false</function_field>
+        <help/>
+        <hint/>
+        <internal_type display_value="">document_id</internal_type>
+        <label>Record</label>
+        <mandatory>true</mandatory>
+        <max_length>200</max_length>
+        <model display_value="My Monthly Savings Aggregate">d365d3132f52201022509facf699b607</model>
+        <model_id>d365d3132f52201022509facf699b607</model_id>
+        <model_table>sys_hub_flow</model_table>
+        <name>var__m_sys_hub_flow_input_d365d3132f52201022509facf699b607</name>
+        <next_element/>
+        <order>100</order>
+        <primary>false</primary>
+        <read_only>false</read_only>
+        <read_roles/>
+        <reference/>
+        <reference_cascade_rule/>
+        <reference_floats>false</reference_floats>
+        <reference_key/>
+        <reference_qual/>
+        <reference_qual_condition/>
+        <reference_type/>
+        <sizeclass/>
+        <spell_check>false</spell_check>
+        <staged>false</staged>
+        <sys_class_name>sys_hub_flow_input</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2021-02-18 17:36:07</sys_created_on>
+        <sys_id>03b51f532f52201022509facf699b652</sys_id>
+        <sys_mod_count>2</sys_mod_count>
+        <sys_name/>
+        <sys_package/>
+        <sys_policy/>
+        <sys_scope display_value="NeedIt">6ead8e780f603200cd674f8ce1050ed1</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2021-02-19 04:47:31</sys_updated_on>
+        <table_reference>false</table_reference>
+        <text_index>false</text_index>
+        <unique>false</unique>
+        <use_dependent_field>false</use_dependent_field>
+        <use_dynamic_default>false</use_dynamic_default>
+        <use_reference_qualifier>simple</use_reference_qualifier>
+        <virtual>false</virtual>
+        <widget/>
+        <write_roles/>
+        <xml_view>false</xml_view>
+    </sys_hub_flow_input>
+    <sys_hub_flow_input action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <array>false</array>
+        <array_denormalized>false</array_denormalized>
+        <attributes>child_label=FDChangeDetails,child_name=FDChangeDetails,child_type=object,child_type_label=Object,co_type_name=FDce6fa123dad62010f387b7cd98e132ad,element_mapping_provider=com.glide.flow_design.action.data.FlowDesignVariableMapper,pwd2droppable=true,uiType=array.object,uiTypeLabel=Array.Object</attributes>
+        <audit>false</audit>
+        <calculation><![CDATA[(function calculatedFieldValue(current) {
+
+	// Add your code here
+	return '';  // return the calculated value
+
+})(current);]]></calculation>
+        <choice/>
+        <choice_field/>
+        <choice_table/>
+        <column_label/>
+        <comments/>
+        <create_roles/>
+        <default_value/>
+        <defaultsort/>
+        <delete_roles/>
+        <dependent/>
+        <dependent_on_field/>
+        <display>false</display>
+        <dynamic_creation>false</dynamic_creation>
+        <dynamic_creation_script/>
+        <dynamic_default_value/>
+        <dynamic_ref_qual/>
+        <element>changed_fields</element>
+        <element_reference>false</element_reference>
+        <foreign_database/>
+        <function_definition/>
+        <function_field>false</function_field>
+        <help/>
+        <hint/>
+        <internal_type display_value="String">string</internal_type>
+        <label>Changed Fields</label>
+        <mandatory>false</mandatory>
+        <max_length>4000</max_length>
+        <model display_value="My Monthly Savings Aggregate">d365d3132f52201022509facf699b607</model>
+        <model_id>d365d3132f52201022509facf699b607</model_id>
+        <model_table>sys_hub_flow</model_table>
+        <name>var__m_sys_hub_flow_input_d365d3132f52201022509facf699b607</name>
+        <next_element/>
+        <order>100</order>
+        <primary>false</primary>
+        <read_only>false</read_only>
+        <read_roles/>
+        <reference/>
+        <reference_cascade_rule/>
+        <reference_floats>false</reference_floats>
+        <reference_key/>
+        <reference_qual/>
+        <reference_qual_condition/>
+        <reference_type/>
+        <sizeclass/>
+        <spell_check>false</spell_check>
+        <staged>false</staged>
+        <sys_class_name>sys_hub_flow_input</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2021-02-18 17:36:07</sys_created_on>
+        <sys_id>0bb51f532f52201022509facf699b658</sys_id>
+        <sys_mod_count>5</sys_mod_count>
+        <sys_name/>
+        <sys_package/>
+        <sys_policy/>
+        <sys_scope display_value="NeedIt">6ead8e780f603200cd674f8ce1050ed1</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2021-02-19 04:47:31</sys_updated_on>
+        <table_reference>false</table_reference>
+        <text_index>false</text_index>
+        <unique>false</unique>
+        <use_dependent_field>false</use_dependent_field>
+        <use_dynamic_default>false</use_dynamic_default>
+        <use_reference_qualifier>simple</use_reference_qualifier>
+        <virtual>false</virtual>
+        <widget/>
+        <write_roles/>
+        <xml_view>false</xml_view>
+    </sys_hub_flow_input>
+    <sys_hub_flow_input action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <array>false</array>
+        <array_denormalized>false</array_denormalized>
+        <attributes>element_mapping_provider=com.glide.flow_design.action.data.FlowDesignVariableMapper,test_input_hidden=true,uiType=table_name,uiTypeLabel=Table Name</attributes>
+        <audit>false</audit>
+        <calculation><![CDATA[(function calculatedFieldValue(current) {
+
+	// Add your code here
+	return '';  // return the calculated value
+
+})(current);]]></calculation>
+        <choice/>
+        <choice_field/>
+        <choice_table/>
+        <column_label/>
+        <comments/>
+        <create_roles/>
+        <default_value/>
+        <defaultsort/>
+        <delete_roles/>
+        <dependent/>
+        <dependent_on_field/>
+        <display>false</display>
+        <dynamic_creation>false</dynamic_creation>
+        <dynamic_creation_script/>
+        <dynamic_default_value/>
+        <dynamic_ref_qual/>
+        <element>table_name</element>
+        <element_reference>false</element_reference>
+        <foreign_database/>
+        <function_definition/>
+        <function_field>false</function_field>
+        <help/>
+        <hint/>
+        <internal_type display_value="">table_name</internal_type>
+        <label>Table Name</label>
+        <mandatory>false</mandatory>
+        <max_length>200</max_length>
+        <model display_value="My Monthly Savings Aggregate">d365d3132f52201022509facf699b607</model>
+        <model_id>d365d3132f52201022509facf699b607</model_id>
+        <model_table>sys_hub_flow</model_table>
+        <name>var__m_sys_hub_flow_input_d365d3132f52201022509facf699b607</name>
+        <next_element/>
+        <order>101</order>
+        <primary>false</primary>
+        <read_only>false</read_only>
+        <read_roles/>
+        <reference/>
+        <reference_cascade_rule/>
+        <reference_floats>false</reference_floats>
+        <reference_key/>
+        <reference_qual/>
+        <reference_qual_condition/>
+        <reference_type/>
+        <sizeclass/>
+        <spell_check>false</spell_check>
+        <staged>false</staged>
+        <sys_class_name>sys_hub_flow_input</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2021-02-18 17:36:07</sys_created_on>
+        <sys_id>0bb51f532f52201022509facf699b68f</sys_id>
+        <sys_mod_count>2</sys_mod_count>
+        <sys_name/>
+        <sys_package/>
+        <sys_policy/>
+        <sys_scope display_value="NeedIt">6ead8e780f603200cd674f8ce1050ed1</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2021-02-19 04:47:31</sys_updated_on>
+        <table_reference>false</table_reference>
+        <text_index>false</text_index>
+        <unique>false</unique>
+        <use_dependent_field>false</use_dependent_field>
+        <use_dynamic_default>false</use_dynamic_default>
+        <use_reference_qualifier>simple</use_reference_qualifier>
+        <virtual>false</virtual>
+        <widget/>
+        <write_roles/>
+        <xml_view>false</xml_view>
+    </sys_hub_flow_input>
+    <sys_hub_action_instance action="delete_multiple" query="flow=d365d3132f52201022509facf699b607^sys_idNOT IN1e6fa1232fd6201022509facf699b6e7,566fa1232fd6201022509facf699b6ef"/>
+    <sys_hub_action_instance action="INSERT_OR_UPDATE">
+        <action_inputs/>
+        <action_inputs/>
+        <action_type display_value="Look Up Record">9d09f99587003300663ca1bb36cb0ba3</action_type>
+        <action_type_parent/>
+        <comment/>
+        <compiled_snapshot/>
+        <display_text/>
+        <flow display_value="My Monthly Savings Aggregate">d365d3132f52201022509facf699b607</flow>
+        <order>1</order>
+        <parent_ui_id/>
+        <sys_class_name>sys_hub_action_instance</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2021-02-19 04:47:32</sys_created_on>
+        <sys_id>1e6fa1232fd6201022509facf699b6e7</sys_id>
+        <sys_mod_count>2</sys_mod_count>
+        <sys_scope display_value="NeedIt">6ead8e780f603200cd674f8ce1050ed1</sys_scope>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2021-02-19 04:47:32</sys_updated_on>
+        <ui_id>49864385-f8c4-4c12-9513-040868ae79e6</ui_id>
+    </sys_hub_action_instance>
+    <sys_variable_value action="delete_multiple" query="document_key=1e6fa1232fd6201022509facf699b6e7"/>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>sys_hub_action_instance</document>
+        <document_key>1e6fa1232fd6201022509facf699b6e7</document_key>
+        <order>0</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2021-02-19 04:47:32</sys_created_on>
+        <sys_id>166fa1232fd6201022509facf699b6eb</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2021-02-19 04:47:32</sys_updated_on>
+        <value>x_58872_needit_my_monthly_savings</value>
+        <variable display_value="">d909f99587003300663ca1bb36cb0ba4</variable>
+    </sys_variable_value>
+    <sys_element_mapping action="delete_multiple" query="id=1e6fa1232fd6201022509facf699b6e7"/>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>conditions</field>
+        <id>1e6fa1232fd6201022509facf699b6e7</id>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2021-02-19 04:47:32</sys_created_on>
+        <sys_id>da6fa1232fd6201022509facf699b6ea</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2021-02-19 04:47:32</sys_updated_on>
+        <table>var__m_sys_hub_action_input_9d09f99587003300663ca1bb36cb0ba3</table>
+        <value>yearLIKE{{Created or Updated_1.current.day}}</value>
+    </sys_element_mapping>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>table</field>
+        <id>1e6fa1232fd6201022509facf699b6e7</id>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2021-02-19 04:47:32</sys_created_on>
+        <sys_id>926fa1232fd6201022509facf699b6eb</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2021-02-19 04:47:32</sys_updated_on>
+        <table>var__m_sys_hub_action_input_9d09f99587003300663ca1bb36cb0ba3</table>
+        <value/>
+    </sys_element_mapping>
+    <sys_hub_input_scripts action="delete_multiple" query="instance=1e6fa1232fd6201022509facf699b6e7^sys_idNOT IN5a6fa1232fd6201022509facf699b6e9"/>
+    <sys_hub_input_scripts action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <input_name>conditions</input_name>
+        <instance>1e6fa1232fd6201022509facf699b6e7</instance>
+        <referenced_table>sys_hub_action_instance</referenced_table>
+        <script>{"conditions":{"scriptActive":true,"script":"/*\n**Access Flow/Action data using the fd_data object. Script must return a value.\n**example: var shortDesc \u003d fd_data.trigger.current.short_description;\n**return shortDesc;\n**\n**Requires GlideRecord encodedQuery response, example:\n**\"active\u003dtrue^short_descriptionSTARTSWITHtest\";\n*/\nreturn \"2021\""}}</script>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2021-02-19 04:47:32</sys_created_on>
+        <sys_id>5a6fa1232fd6201022509facf699b6e9</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2021-02-19 04:47:32</sys_updated_on>
+    </sys_hub_input_scripts>
+    <sys_hub_action_instance action="INSERT_OR_UPDATE">
+        <action_inputs/>
+        <action_inputs/>
+        <action_type display_value="Create or Update Record">ab575ae253b3230034c6ddeeff7b12f1</action_type>
+        <action_type_parent/>
+        <comment/>
+        <compiled_snapshot>ab575ae253b3230034c6ddeeff7b12f1</compiled_snapshot>
+        <display_text/>
+        <flow display_value="My Monthly Savings Aggregate">d365d3132f52201022509facf699b607</flow>
+        <order>2</order>
+        <parent_ui_id/>
+        <sys_class_name>sys_hub_action_instance</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2021-02-19 04:47:32</sys_created_on>
+        <sys_id>566fa1232fd6201022509facf699b6ef</sys_id>
+        <sys_mod_count>2</sys_mod_count>
+        <sys_scope display_value="NeedIt">6ead8e780f603200cd674f8ce1050ed1</sys_scope>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2021-02-19 04:47:32</sys_updated_on>
+        <ui_id>4a47ea31-306c-4aeb-ab6a-bd427013aa38</ui_id>
+    </sys_hub_action_instance>
+    <sys_variable_value action="delete_multiple" query="document_key=566fa1232fd6201022509facf699b6ef"/>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>sys_hub_action_instance</document>
+        <document_key>566fa1232fd6201022509facf699b6ef</document_key>
+        <order>0</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2021-02-19 04:47:32</sys_created_on>
+        <sys_id>d66fa1232fd6201022509facf699b6fd</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2021-02-19 04:47:32</sys_updated_on>
+        <value>x_58872_needit_my_monthly_savings</value>
+        <variable display_value="">27575ae253b3230034c6ddeeff7b12f4</variable>
+    </sys_variable_value>
+    <sys_element_mapping action="delete_multiple" query="id=566fa1232fd6201022509facf699b6ef"/>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>fields</field>
+        <id>566fa1232fd6201022509facf699b6ef</id>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2021-02-19 04:47:32</sys_created_on>
+        <sys_id>926fa1232fd6201022509facf699b6fd</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2021-02-19 04:47:32</sys_updated_on>
+        <table>var__m_sys_hub_action_input_ab575ae253b3230034c6ddeeff7b12f1</table>
+        <value>year={{fd_transform:e7dcd575-5530-4fce-ace7-b1255033c81c}}^month={{fd_transform:ce383a10-1767-4e3c-9373-705c0216c407}}^savings={{Created or Updated_1.current.saving}}</value>
+    </sys_element_mapping>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>table_name</field>
+        <id>566fa1232fd6201022509facf699b6ef</id>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2021-02-19 04:47:32</sys_created_on>
+        <sys_id>566fa1232fd6201022509facf699b6fd</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2021-02-19 04:47:32</sys_updated_on>
+        <table>var__m_sys_hub_action_input_ab575ae253b3230034c6ddeeff7b12f1</table>
+        <value/>
+    </sys_element_mapping>
+    <sys_hub_input_scripts action="delete_multiple" query="instance=566fa1232fd6201022509facf699b6ef^sys_idNOT IN9a6fa1232fd6201022509facf699b6fc"/>
+    <sys_hub_input_scripts action="INSERT_OR_UPDATE">
+        <active>false</active>
+        <input_name>fields</input_name>
+        <instance>566fa1232fd6201022509facf699b6ef</instance>
+        <referenced_table>sys_hub_action_instance</referenced_table>
+        <script>{"savings":{"scriptActive":false,"savedValue":"{{Created or Updated_1.current.saving}}"}}</script>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2021-02-19 04:47:32</sys_created_on>
+        <sys_id>9a6fa1232fd6201022509facf699b6fc</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2021-02-19 04:47:32</sys_updated_on>
+    </sys_hub_input_scripts>
+    <sys_hub_pill_compound action="delete_multiple" query="attached_to=d365d3132f52201022509facf699b607^sys_idNOT IN12a957172f52201022509facf699b6fb,16a957172f52201022509facf699b6fa,226fe1232fd6201022509facf699b606,52a957172f52201022509facf699b6fa,5aa957172f52201022509facf699b6fb,5ea957172f52201022509facf699b6fa,6e6fe1232fd6201022509facf699b605,96a957172f52201022509facf699b6fb,9aa957172f52201022509facf699b6fa,9ea957172f52201022509facf699b6f9,a66fe1232fd6201022509facf699b605,d2a957172f52201022509facf699b6fb,d6a957172f52201022509facf699b6fa,daa957172f52201022509facf699b6f9,e26fe1232fd6201022509facf699b606"/>
+    <sys_hub_pill_compound action="INSERT_OR_UPDATE">
+        <attached_to>d365d3132f52201022509facf699b607</attached_to>
+        <extra_info/>
+        <order>0</order>
+        <prescription>{{Created or Updated_1.current.day}}</prescription>
+        <source_ui_id/>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2021-02-18 17:53:15</sys_created_on>
+        <sys_id>12a957172f52201022509facf699b6fb</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_scope display_value="NeedIt">6ead8e780f603200cd674f8ce1050ed1</sys_scope>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2021-02-18 17:53:15</sys_updated_on>
+        <transform_compositions>[]</transform_compositions>
+        <transform_definition_id/>
+        <ui_id>07bbfa40-bf67-418c-87af-6d110d422e4d</ui_id>
+    </sys_hub_pill_compound>
+    <sys_hub_pill_compound action="INSERT_OR_UPDATE">
+        <attached_to>d365d3132f52201022509facf699b607</attached_to>
+        <extra_info/>
+        <order>0</order>
+        <prescription>{{Created or Updated_1.current.day}}</prescription>
+        <source_ui_id/>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2021-02-18 17:53:15</sys_created_on>
+        <sys_id>16a957172f52201022509facf699b6fa</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_scope display_value="NeedIt">6ead8e780f603200cd674f8ce1050ed1</sys_scope>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2021-02-18 17:53:15</sys_updated_on>
+        <transform_compositions>[]</transform_compositions>
+        <transform_definition_id/>
+        <ui_id>9deed29d-b2e1-455f-9062-cbc3155f95ec</ui_id>
+    </sys_hub_pill_compound>
+    <sys_hub_pill_compound action="INSERT_OR_UPDATE">
+        <attached_to>d365d3132f52201022509facf699b607</attached_to>
+        <extra_info/>
+        <order>0</order>
+        <prescription>{{Created or Updated_1.current.day}}</prescription>
+        <source_ui_id/>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2021-02-19 04:47:33</sys_created_on>
+        <sys_id>226fe1232fd6201022509facf699b606</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_scope display_value="NeedIt">6ead8e780f603200cd674f8ce1050ed1</sys_scope>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2021-02-19 04:47:33</sys_updated_on>
+        <transform_compositions>[]</transform_compositions>
+        <transform_definition_id/>
+        <ui_id>ce383a10-1767-4e3c-9373-705c0216c407</ui_id>
+    </sys_hub_pill_compound>
+    <sys_hub_pill_compound action="INSERT_OR_UPDATE">
+        <attached_to>d365d3132f52201022509facf699b607</attached_to>
+        <extra_info/>
+        <order>2</order>
+        <prescription/>
+        <source_ui_id>0c5e000f-17d8-4bce-9421-d287b2fc6107</source_ui_id>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2021-02-18 17:53:15</sys_created_on>
+        <sys_id>52a957172f52201022509facf699b6fa</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_scope display_value="NeedIt">6ead8e780f603200cd674f8ce1050ed1</sys_scope>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2021-02-18 17:53:15</sys_updated_on>
+        <transform_compositions>[{"id":"5094327dc73333003884f80bf4c2600a","transformType":null,"transformDefinition":null,"order":0,"parameters":[{"id":null,"name":"date_format","label":"Output Date Format","order":0,"attributes":{},"value":"NULL_OVERRIDE","type":"choice","defaultValue":null,"typeLabel":null,"mandatory":true,"choices":[{"label":"-- None --","value":"","order":1},{"label":"Custom (enter below)","value":"NULL_OVERRIDE","order":2},{"label":"ISO Date (2004-06-28)","value":"yyyy-MM-dd","order":3},{"label":"ISO Date/Time (2004-06-28T17:34:10Z)","value":"yyyy-MM-dd'T'HH:mm:ss'Z'","order":4},{"label":"ServiceNow Date/Time (2004-06-28 17:34:10)","value":"yyyy-MM-dd HH:mm:ss","order":5},{"label":"EEE, MMM dd, yyyy (Mon, Jun 28, 2004)","value":"EEE, MMM dd, yyyy","order":6},{"label":"EEE, MMM dd, yyyy h:mm a (Mon, Jun 28, 2004 5:34 PM)","value":"EEE, MMM dd, yyyy h:mm a","order":7},{"label":"MM-dd-yyyy (06-28-2004)","value":"MM-dd-yyyy","order":8},{"label":"MM-dd-yyyy h:mm a (06-28-2004 5:34 PM)","value":"MM-dd-yyyy h:mm a","order":9},{"label":"MM-dd-yyyy HH:mm:ss (06-28-2004 17:34:10)","value":"MM-dd-yyyy HH:mm:ss","order":10},{"label":"MM/dd/yyyy (06/28/2004)","value":"MM/dd/yyyy","order":11},{"label":"MM/dd/yyyy h:mm a (06/28/2004 5:34 PM)","value":"MM/dd/yyyy h:mm a","order":12},{"label":"MM/dd/yyyy HH:mm:ss (06/28/2004 15:34:10)","value":"MM/dd/yyyy HH:mm:ss","order":13},{"label":"MMM dd, yyyy (Jun 28, 2004)","value":"MMM dd, yyyy","order":14},{"label":"MMM dd, yyyy h:mm a (Jun 28, 2004 5:34 PM)","value":"MMM dd, yyyy h:mm a","order":15},{"label":"yyyy-MM-dd h:mm a (2004-06-28 5:34 PM)","value":"yyyy-MM-dd h:mm a","order":16},{"label":"yyyy/MM/dd (2004/06/28)","value":"yyyy/MM/dd","order":17},{"label":"yyyy/MM/dd h:mm a (2004/06/28 5:34 PM)","value":"yyyy/MM/dd h:mm a","order":18},{"label":"yyyy/MM/dd HH:mm:ss (2004/06/28 17:34:10)","value":"yyyy/MM/dd HH:mm:ss","order":19}]},{"id":null,"name":"custom_format","label":"Custom Format","order":1,"attributes":{},"value":"MMM","type":"string","defaultValue":"","typeLabel":null,"mandatory":false,"choices":[]}]}]</transform_compositions>
+        <transform_definition_id display_value="date_to_string">4e343e3dc73333003884f80bf4c26096</transform_definition_id>
+        <ui_id>86210ad0-8d8a-425a-88a9-34f7fd6d8c41</ui_id>
+    </sys_hub_pill_compound>
+    <sys_hub_pill_compound action="INSERT_OR_UPDATE">
+        <attached_to>d365d3132f52201022509facf699b607</attached_to>
+        <extra_info/>
+        <order>1</order>
+        <prescription/>
+        <source_ui_id>72777a26-499e-46e3-a41a-b08528cce4c4</source_ui_id>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2021-02-18 17:53:15</sys_created_on>
+        <sys_id>5aa957172f52201022509facf699b6fb</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_scope display_value="NeedIt">6ead8e780f603200cd674f8ce1050ed1</sys_scope>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2021-02-18 17:53:15</sys_updated_on>
+        <transform_compositions>[{"id":"5094327dc73333003884f80bf4c2600a","transformType":null,"transformDefinition":null,"order":0,"parameters":[{"id":null,"name":"date_format","label":"Output Date Format","order":0,"attributes":{},"value":"NULL_OVERRIDE","type":"choice","defaultValue":null,"typeLabel":null,"mandatory":true,"choices":[{"label":"-- None --","value":"","order":1},{"label":"Custom (enter below)","value":"NULL_OVERRIDE","order":2},{"label":"ISO Date (2004-06-28)","value":"yyyy-MM-dd","order":3},{"label":"ISO Date/Time (2004-06-28T17:34:10Z)","value":"yyyy-MM-dd'T'HH:mm:ss'Z'","order":4},{"label":"ServiceNow Date/Time (2004-06-28 17:34:10)","value":"yyyy-MM-dd HH:mm:ss","order":5},{"label":"EEE, MMM dd, yyyy (Mon, Jun 28, 2004)","value":"EEE, MMM dd, yyyy","order":6},{"label":"EEE, MMM dd, yyyy h:mm a (Mon, Jun 28, 2004 5:34 PM)","value":"EEE, MMM dd, yyyy h:mm a","order":7},{"label":"MM-dd-yyyy (06-28-2004)","value":"MM-dd-yyyy","order":8},{"label":"MM-dd-yyyy h:mm a (06-28-2004 5:34 PM)","value":"MM-dd-yyyy h:mm a","order":9},{"label":"MM-dd-yyyy HH:mm:ss (06-28-2004 17:34:10)","value":"MM-dd-yyyy HH:mm:ss","order":10},{"label":"MM/dd/yyyy (06/28/2004)","value":"MM/dd/yyyy","order":11},{"label":"MM/dd/yyyy h:mm a (06/28/2004 5:34 PM)","value":"MM/dd/yyyy h:mm a","order":12},{"label":"MM/dd/yyyy HH:mm:ss (06/28/2004 15:34:10)","value":"MM/dd/yyyy HH:mm:ss","order":13},{"label":"MMM dd, yyyy (Jun 28, 2004)","value":"MMM dd, yyyy","order":14},{"label":"MMM dd, yyyy h:mm a (Jun 28, 2004 5:34 PM)","value":"MMM dd, yyyy h:mm a","order":15},{"label":"yyyy-MM-dd h:mm a (2004-06-28 5:34 PM)","value":"yyyy-MM-dd h:mm a","order":16},{"label":"yyyy/MM/dd (2004/06/28)","value":"yyyy/MM/dd","order":17},{"label":"yyyy/MM/dd h:mm a (2004/06/28 5:34 PM)","value":"yyyy/MM/dd h:mm a","order":18},{"label":"yyyy/MM/dd HH:mm:ss (2004/06/28 17:34:10)","value":"yyyy/MM/dd HH:mm:ss","order":19}]},{"id":null,"name":"custom_format","label":"Custom Format","order":1,"attributes":{},"value":"MMM","type":"string","defaultValue":"","typeLabel":null,"mandatory":false,"choices":[]}]}]</transform_compositions>
+        <transform_definition_id display_value="date_to_string">4e343e3dc73333003884f80bf4c26096</transform_definition_id>
+        <ui_id>110ea563-6db7-4105-ace9-f5d451494e1d</ui_id>
+    </sys_hub_pill_compound>
+    <sys_hub_pill_compound action="INSERT_OR_UPDATE">
+        <attached_to>d365d3132f52201022509facf699b607</attached_to>
+        <extra_info/>
+        <order>1</order>
+        <prescription/>
+        <source_ui_id>c9ddbe22-d4fb-4e43-9ddb-0cc040881240</source_ui_id>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2021-02-18 17:53:15</sys_created_on>
+        <sys_id>5ea957172f52201022509facf699b6fa</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_scope display_value="NeedIt">6ead8e780f603200cd674f8ce1050ed1</sys_scope>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2021-02-18 17:53:15</sys_updated_on>
+        <transform_compositions>[{"id":"5094327dc73333003884f80bf4c2600a","transformType":null,"transformDefinition":null,"order":0,"parameters":[{"id":null,"name":"date_format","label":"Output Date Format","order":0,"attributes":{},"value":"NULL_OVERRIDE","type":"choice","defaultValue":null,"typeLabel":null,"mandatory":true,"choices":[{"label":"-- None --","value":"","order":1},{"label":"Custom (enter below)","value":"NULL_OVERRIDE","order":2},{"label":"ISO Date (2004-06-28)","value":"yyyy-MM-dd","order":3},{"label":"ISO Date/Time (2004-06-28T17:34:10Z)","value":"yyyy-MM-dd'T'HH:mm:ss'Z'","order":4},{"label":"ServiceNow Date/Time (2004-06-28 17:34:10)","value":"yyyy-MM-dd HH:mm:ss","order":5},{"label":"EEE, MMM dd, yyyy (Mon, Jun 28, 2004)","value":"EEE, MMM dd, yyyy","order":6},{"label":"EEE, MMM dd, yyyy h:mm a (Mon, Jun 28, 2004 5:34 PM)","value":"EEE, MMM dd, yyyy h:mm a","order":7},{"label":"MM-dd-yyyy (06-28-2004)","value":"MM-dd-yyyy","order":8},{"label":"MM-dd-yyyy h:mm a (06-28-2004 5:34 PM)","value":"MM-dd-yyyy h:mm a","order":9},{"label":"MM-dd-yyyy HH:mm:ss (06-28-2004 17:34:10)","value":"MM-dd-yyyy HH:mm:ss","order":10},{"label":"MM/dd/yyyy (06/28/2004)","value":"MM/dd/yyyy","order":11},{"label":"MM/dd/yyyy h:mm a (06/28/2004 5:34 PM)","value":"MM/dd/yyyy h:mm a","order":12},{"label":"MM/dd/yyyy HH:mm:ss (06/28/2004 15:34:10)","value":"MM/dd/yyyy HH:mm:ss","order":13},{"label":"MMM dd, yyyy (Jun 28, 2004)","value":"MMM dd, yyyy","order":14},{"label":"MMM dd, yyyy h:mm a (Jun 28, 2004 5:34 PM)","value":"MMM dd, yyyy h:mm a","order":15},{"label":"yyyy-MM-dd h:mm a (2004-06-28 5:34 PM)","value":"yyyy-MM-dd h:mm a","order":16},{"label":"yyyy/MM/dd (2004/06/28)","value":"yyyy/MM/dd","order":17},{"label":"yyyy/MM/dd h:mm a (2004/06/28 5:34 PM)","value":"yyyy/MM/dd h:mm a","order":18},{"label":"yyyy/MM/dd HH:mm:ss (2004/06/28 17:34:10)","value":"yyyy/MM/dd HH:mm:ss","order":19}]},{"id":null,"name":"custom_format","label":"Custom Format","order":1,"attributes":{},"value":"y","type":"string","defaultValue":"","typeLabel":null,"mandatory":false,"choices":[]}]}]</transform_compositions>
+        <transform_definition_id display_value="date_to_string">4e343e3dc73333003884f80bf4c26096</transform_definition_id>
+        <ui_id>d24ab75b-60c6-4ab0-9b6e-0c8955949ae2</ui_id>
+    </sys_hub_pill_compound>
+    <sys_hub_pill_compound action="INSERT_OR_UPDATE">
+        <attached_to>d365d3132f52201022509facf699b607</attached_to>
+        <extra_info/>
+        <order>1</order>
+        <prescription/>
+        <source_ui_id>e7dcd575-5530-4fce-ace7-b1255033c81c</source_ui_id>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2021-02-19 04:47:33</sys_created_on>
+        <sys_id>6e6fe1232fd6201022509facf699b605</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_scope display_value="NeedIt">6ead8e780f603200cd674f8ce1050ed1</sys_scope>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2021-02-19 04:47:33</sys_updated_on>
+        <transform_compositions>[{"id":"5094327dc73333003884f80bf4c2600a","transformType":null,"transformDefinition":null,"order":0,"parameters":[{"id":null,"name":"date_format","label":"Output Date Format","order":0,"attributes":{},"value":"NULL_OVERRIDE","type":"choice","defaultValue":null,"typeLabel":null,"mandatory":true,"choices":[{"label":"-- None --","value":"","order":1},{"label":"Custom (enter below)","value":"NULL_OVERRIDE","order":2},{"label":"ISO Date (2004-06-28)","value":"yyyy-MM-dd","order":3},{"label":"ISO Date/Time (2004-06-28T17:34:10Z)","value":"yyyy-MM-dd'T'HH:mm:ss'Z'","order":4},{"label":"ServiceNow Date/Time (2004-06-28 17:34:10)","value":"yyyy-MM-dd HH:mm:ss","order":5},{"label":"EEE, MMM dd, yyyy (Mon, Jun 28, 2004)","value":"EEE, MMM dd, yyyy","order":6},{"label":"EEE, MMM dd, yyyy h:mm a (Mon, Jun 28, 2004 5:34 PM)","value":"EEE, MMM dd, yyyy h:mm a","order":7},{"label":"MM-dd-yyyy (06-28-2004)","value":"MM-dd-yyyy","order":8},{"label":"MM-dd-yyyy h:mm a (06-28-2004 5:34 PM)","value":"MM-dd-yyyy h:mm a","order":9},{"label":"MM-dd-yyyy HH:mm:ss (06-28-2004 17:34:10)","value":"MM-dd-yyyy HH:mm:ss","order":10},{"label":"MM/dd/yyyy (06/28/2004)","value":"MM/dd/yyyy","order":11},{"label":"MM/dd/yyyy h:mm a (06/28/2004 5:34 PM)","value":"MM/dd/yyyy h:mm a","order":12},{"label":"MM/dd/yyyy HH:mm:ss (06/28/2004 15:34:10)","value":"MM/dd/yyyy HH:mm:ss","order":13},{"label":"MMM dd, yyyy (Jun 28, 2004)","value":"MMM dd, yyyy","order":14},{"label":"MMM dd, yyyy h:mm a (Jun 28, 2004 5:34 PM)","value":"MMM dd, yyyy h:mm a","order":15},{"label":"yyyy-MM-dd h:mm a (2004-06-28 5:34 PM)","value":"yyyy-MM-dd h:mm a","order":16},{"label":"yyyy/MM/dd (2004/06/28)","value":"yyyy/MM/dd","order":17},{"label":"yyyy/MM/dd h:mm a (2004/06/28 5:34 PM)","value":"yyyy/MM/dd h:mm a","order":18},{"label":"yyyy/MM/dd HH:mm:ss (2004/06/28 17:34:10)","value":"yyyy/MM/dd HH:mm:ss","order":19}]},{"id":null,"name":"custom_format","label":"Custom Format","order":1,"attributes":{},"value":"y","type":"string","defaultValue":"","typeLabel":null,"mandatory":false,"choices":[]}]}]</transform_compositions>
+        <transform_definition_id display_value="date_to_string">4e343e3dc73333003884f80bf4c26096</transform_definition_id>
+        <ui_id>f3a45b30-43be-4cf8-8897-f2f8390c0855</ui_id>
+    </sys_hub_pill_compound>
+    <sys_hub_pill_compound action="INSERT_OR_UPDATE">
+        <attached_to>d365d3132f52201022509facf699b607</attached_to>
+        <extra_info/>
+        <order>0</order>
+        <prescription>{{Created or Updated_1.current.day}}</prescription>
+        <source_ui_id/>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2021-02-18 17:53:15</sys_created_on>
+        <sys_id>96a957172f52201022509facf699b6fb</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_scope display_value="NeedIt">6ead8e780f603200cd674f8ce1050ed1</sys_scope>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2021-02-18 17:53:15</sys_updated_on>
+        <transform_compositions>[]</transform_compositions>
+        <transform_definition_id/>
+        <ui_id>72777a26-499e-46e3-a41a-b08528cce4c4</ui_id>
+    </sys_hub_pill_compound>
+    <sys_hub_pill_compound action="INSERT_OR_UPDATE">
+        <attached_to>d365d3132f52201022509facf699b607</attached_to>
+        <extra_info/>
+        <order>0</order>
+        <prescription>{{Created or Updated_1.current.day}}</prescription>
+        <source_ui_id/>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2021-02-18 17:53:15</sys_created_on>
+        <sys_id>9aa957172f52201022509facf699b6fa</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_scope display_value="NeedIt">6ead8e780f603200cd674f8ce1050ed1</sys_scope>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2021-02-18 17:53:15</sys_updated_on>
+        <transform_compositions>[]</transform_compositions>
+        <transform_definition_id/>
+        <ui_id>c9ddbe22-d4fb-4e43-9ddb-0cc040881240</ui_id>
+    </sys_hub_pill_compound>
+    <sys_hub_pill_compound action="INSERT_OR_UPDATE">
+        <attached_to>d365d3132f52201022509facf699b607</attached_to>
+        <extra_info/>
+        <order>1</order>
+        <prescription/>
+        <source_ui_id>0c5e000f-17d8-4bce-9421-d287b2fc6107</source_ui_id>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2021-02-18 17:53:15</sys_created_on>
+        <sys_id>9ea957172f52201022509facf699b6f9</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_scope display_value="NeedIt">6ead8e780f603200cd674f8ce1050ed1</sys_scope>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2021-02-18 17:53:15</sys_updated_on>
+        <transform_compositions>[{"id":"5094327dc73333003884f80bf4c2600a","transformType":null,"transformDefinition":null,"order":0,"parameters":[{"id":null,"name":"date_format","label":"Output Date Format","order":0,"attributes":{},"value":"NULL_OVERRIDE","type":"choice","defaultValue":null,"typeLabel":null,"mandatory":true,"choices":[{"label":"-- None --","value":"","order":1},{"label":"Custom (enter below)","value":"NULL_OVERRIDE","order":2},{"label":"ISO Date (2004-06-28)","value":"yyyy-MM-dd","order":3},{"label":"ISO Date/Time (2004-06-28T17:34:10Z)","value":"yyyy-MM-dd'T'HH:mm:ss'Z'","order":4},{"label":"ServiceNow Date/Time (2004-06-28 17:34:10)","value":"yyyy-MM-dd HH:mm:ss","order":5},{"label":"EEE, MMM dd, yyyy (Mon, Jun 28, 2004)","value":"EEE, MMM dd, yyyy","order":6},{"label":"EEE, MMM dd, yyyy h:mm a (Mon, Jun 28, 2004 5:34 PM)","value":"EEE, MMM dd, yyyy h:mm a","order":7},{"label":"MM-dd-yyyy (06-28-2004)","value":"MM-dd-yyyy","order":8},{"label":"MM-dd-yyyy h:mm a (06-28-2004 5:34 PM)","value":"MM-dd-yyyy h:mm a","order":9},{"label":"MM-dd-yyyy HH:mm:ss (06-28-2004 17:34:10)","value":"MM-dd-yyyy HH:mm:ss","order":10},{"label":"MM/dd/yyyy (06/28/2004)","value":"MM/dd/yyyy","order":11},{"label":"MM/dd/yyyy h:mm a (06/28/2004 5:34 PM)","value":"MM/dd/yyyy h:mm a","order":12},{"label":"MM/dd/yyyy HH:mm:ss (06/28/2004 15:34:10)","value":"MM/dd/yyyy HH:mm:ss","order":13},{"label":"MMM dd, yyyy (Jun 28, 2004)","value":"MMM dd, yyyy","order":14},{"label":"MMM dd, yyyy h:mm a (Jun 28, 2004 5:34 PM)","value":"MMM dd, yyyy h:mm a","order":15},{"label":"yyyy-MM-dd h:mm a (2004-06-28 5:34 PM)","value":"yyyy-MM-dd h:mm a","order":16},{"label":"yyyy/MM/dd (2004/06/28)","value":"yyyy/MM/dd","order":17},{"label":"yyyy/MM/dd h:mm a (2004/06/28 5:34 PM)","value":"yyyy/MM/dd h:mm a","order":18},{"label":"yyyy/MM/dd HH:mm:ss (2004/06/28 17:34:10)","value":"yyyy/MM/dd HH:mm:ss","order":19}]},{"id":null,"name":"custom_format","label":"Custom Format","order":1,"attributes":{},"value":"MMM","type":"string","defaultValue":"","typeLabel":null,"mandatory":false,"choices":[]}]}]</transform_compositions>
+        <transform_definition_id display_value="date_to_string">4e343e3dc73333003884f80bf4c26096</transform_definition_id>
+        <ui_id>dd43e1de-b919-471a-9200-524935b21f01</ui_id>
+    </sys_hub_pill_compound>
+    <sys_hub_pill_compound action="INSERT_OR_UPDATE">
+        <attached_to>d365d3132f52201022509facf699b607</attached_to>
+        <extra_info/>
+        <order>0</order>
+        <prescription>{{Created or Updated_1.current.day}}</prescription>
+        <source_ui_id/>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2021-02-19 04:47:33</sys_created_on>
+        <sys_id>a66fe1232fd6201022509facf699b605</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_scope display_value="NeedIt">6ead8e780f603200cd674f8ce1050ed1</sys_scope>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2021-02-19 04:47:33</sys_updated_on>
+        <transform_compositions>[]</transform_compositions>
+        <transform_definition_id/>
+        <ui_id>e7dcd575-5530-4fce-ace7-b1255033c81c</ui_id>
+    </sys_hub_pill_compound>
+    <sys_hub_pill_compound action="INSERT_OR_UPDATE">
+        <attached_to>d365d3132f52201022509facf699b607</attached_to>
+        <extra_info/>
+        <order>1</order>
+        <prescription/>
+        <source_ui_id>07bbfa40-bf67-418c-87af-6d110d422e4d</source_ui_id>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2021-02-18 17:53:15</sys_created_on>
+        <sys_id>d2a957172f52201022509facf699b6fb</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_scope display_value="NeedIt">6ead8e780f603200cd674f8ce1050ed1</sys_scope>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2021-02-18 17:53:15</sys_updated_on>
+        <transform_compositions>[{"id":"5094327dc73333003884f80bf4c2600a","transformType":null,"transformDefinition":null,"order":0,"parameters":[{"id":null,"name":"date_format","label":"Output Date Format","order":0,"attributes":{},"value":"NULL_OVERRIDE","type":"choice","defaultValue":null,"typeLabel":null,"mandatory":true,"choices":[{"label":"-- None --","value":"","order":1},{"label":"Custom (enter below)","value":"NULL_OVERRIDE","order":2},{"label":"ISO Date (2004-06-28)","value":"yyyy-MM-dd","order":3},{"label":"ISO Date/Time (2004-06-28T17:34:10Z)","value":"yyyy-MM-dd'T'HH:mm:ss'Z'","order":4},{"label":"ServiceNow Date/Time (2004-06-28 17:34:10)","value":"yyyy-MM-dd HH:mm:ss","order":5},{"label":"EEE, MMM dd, yyyy (Mon, Jun 28, 2004)","value":"EEE, MMM dd, yyyy","order":6},{"label":"EEE, MMM dd, yyyy h:mm a (Mon, Jun 28, 2004 5:34 PM)","value":"EEE, MMM dd, yyyy h:mm a","order":7},{"label":"MM-dd-yyyy (06-28-2004)","value":"MM-dd-yyyy","order":8},{"label":"MM-dd-yyyy h:mm a (06-28-2004 5:34 PM)","value":"MM-dd-yyyy h:mm a","order":9},{"label":"MM-dd-yyyy HH:mm:ss (06-28-2004 17:34:10)","value":"MM-dd-yyyy HH:mm:ss","order":10},{"label":"MM/dd/yyyy (06/28/2004)","value":"MM/dd/yyyy","order":11},{"label":"MM/dd/yyyy h:mm a (06/28/2004 5:34 PM)","value":"MM/dd/yyyy h:mm a","order":12},{"label":"MM/dd/yyyy HH:mm:ss (06/28/2004 15:34:10)","value":"MM/dd/yyyy HH:mm:ss","order":13},{"label":"MMM dd, yyyy (Jun 28, 2004)","value":"MMM dd, yyyy","order":14},{"label":"MMM dd, yyyy h:mm a (Jun 28, 2004 5:34 PM)","value":"MMM dd, yyyy h:mm a","order":15},{"label":"yyyy-MM-dd h:mm a (2004-06-28 5:34 PM)","value":"yyyy-MM-dd h:mm a","order":16},{"label":"yyyy/MM/dd (2004/06/28)","value":"yyyy/MM/dd","order":17},{"label":"yyyy/MM/dd h:mm a (2004/06/28 5:34 PM)","value":"yyyy/MM/dd h:mm a","order":18},{"label":"yyyy/MM/dd HH:mm:ss (2004/06/28 17:34:10)","value":"yyyy/MM/dd HH:mm:ss","order":19}]},{"id":null,"name":"custom_format","label":"Custom Format","order":1,"attributes":{},"value":"MMM","type":"string","defaultValue":"","typeLabel":null,"mandatory":false,"choices":[]}]}]</transform_compositions>
+        <transform_definition_id display_value="date_to_string">4e343e3dc73333003884f80bf4c26096</transform_definition_id>
+        <ui_id>33da5a0b-664b-478d-9bfb-45204637f75f</ui_id>
+    </sys_hub_pill_compound>
+    <sys_hub_pill_compound action="INSERT_OR_UPDATE">
+        <attached_to>d365d3132f52201022509facf699b607</attached_to>
+        <extra_info/>
+        <order>1</order>
+        <prescription/>
+        <source_ui_id>9deed29d-b2e1-455f-9062-cbc3155f95ec</source_ui_id>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2021-02-18 17:53:15</sys_created_on>
+        <sys_id>d6a957172f52201022509facf699b6fa</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_scope display_value="NeedIt">6ead8e780f603200cd674f8ce1050ed1</sys_scope>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2021-02-18 17:53:15</sys_updated_on>
+        <transform_compositions>[{"id":"5094327dc73333003884f80bf4c2600a","transformType":null,"transformDefinition":null,"order":0,"parameters":[{"id":null,"name":"date_format","label":"Output Date Format","order":0,"attributes":{},"value":"NULL_OVERRIDE","type":"choice","defaultValue":null,"typeLabel":null,"mandatory":true,"choices":[{"label":"-- None --","value":"","order":1},{"label":"Custom (enter below)","value":"NULL_OVERRIDE","order":2},{"label":"ISO Date (2004-06-28)","value":"yyyy-MM-dd","order":3},{"label":"ISO Date/Time (2004-06-28T17:34:10Z)","value":"yyyy-MM-dd'T'HH:mm:ss'Z'","order":4},{"label":"ServiceNow Date/Time (2004-06-28 17:34:10)","value":"yyyy-MM-dd HH:mm:ss","order":5},{"label":"EEE, MMM dd, yyyy (Mon, Jun 28, 2004)","value":"EEE, MMM dd, yyyy","order":6},{"label":"EEE, MMM dd, yyyy h:mm a (Mon, Jun 28, 2004 5:34 PM)","value":"EEE, MMM dd, yyyy h:mm a","order":7},{"label":"MM-dd-yyyy (06-28-2004)","value":"MM-dd-yyyy","order":8},{"label":"MM-dd-yyyy h:mm a (06-28-2004 5:34 PM)","value":"MM-dd-yyyy h:mm a","order":9},{"label":"MM-dd-yyyy HH:mm:ss (06-28-2004 17:34:10)","value":"MM-dd-yyyy HH:mm:ss","order":10},{"label":"MM/dd/yyyy (06/28/2004)","value":"MM/dd/yyyy","order":11},{"label":"MM/dd/yyyy h:mm a (06/28/2004 5:34 PM)","value":"MM/dd/yyyy h:mm a","order":12},{"label":"MM/dd/yyyy HH:mm:ss (06/28/2004 15:34:10)","value":"MM/dd/yyyy HH:mm:ss","order":13},{"label":"MMM dd, yyyy (Jun 28, 2004)","value":"MMM dd, yyyy","order":14},{"label":"MMM dd, yyyy h:mm a (Jun 28, 2004 5:34 PM)","value":"MMM dd, yyyy h:mm a","order":15},{"label":"yyyy-MM-dd h:mm a (2004-06-28 5:34 PM)","value":"yyyy-MM-dd h:mm a","order":16},{"label":"yyyy/MM/dd (2004/06/28)","value":"yyyy/MM/dd","order":17},{"label":"yyyy/MM/dd h:mm a (2004/06/28 5:34 PM)","value":"yyyy/MM/dd h:mm a","order":18},{"label":"yyyy/MM/dd HH:mm:ss (2004/06/28 17:34:10)","value":"yyyy/MM/dd HH:mm:ss","order":19}]},{"id":null,"name":"custom_format","label":"Custom Format","order":1,"attributes":{},"value":"yyyy","type":"string","defaultValue":"","typeLabel":null,"mandatory":false,"choices":[]}]}]</transform_compositions>
+        <transform_definition_id display_value="date_to_string">4e343e3dc73333003884f80bf4c26096</transform_definition_id>
+        <ui_id>57f1b9f4-a51b-4588-b9ae-595f56261b83</ui_id>
+    </sys_hub_pill_compound>
+    <sys_hub_pill_compound action="INSERT_OR_UPDATE">
+        <attached_to>d365d3132f52201022509facf699b607</attached_to>
+        <extra_info/>
+        <order>0</order>
+        <prescription>{{Created or Updated_1.current.day}}</prescription>
+        <source_ui_id/>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2021-02-18 17:53:15</sys_created_on>
+        <sys_id>daa957172f52201022509facf699b6f9</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_scope display_value="NeedIt">6ead8e780f603200cd674f8ce1050ed1</sys_scope>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2021-02-18 17:53:15</sys_updated_on>
+        <transform_compositions>[]</transform_compositions>
+        <transform_definition_id/>
+        <ui_id>0c5e000f-17d8-4bce-9421-d287b2fc6107</ui_id>
+    </sys_hub_pill_compound>
+    <sys_hub_pill_compound action="INSERT_OR_UPDATE">
+        <attached_to>d365d3132f52201022509facf699b607</attached_to>
+        <extra_info/>
+        <order>1</order>
+        <prescription/>
+        <source_ui_id>ce383a10-1767-4e3c-9373-705c0216c407</source_ui_id>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2021-02-19 04:47:33</sys_created_on>
+        <sys_id>e26fe1232fd6201022509facf699b606</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_scope display_value="NeedIt">6ead8e780f603200cd674f8ce1050ed1</sys_scope>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2021-02-19 04:47:33</sys_updated_on>
+        <transform_compositions>[{"id":"5094327dc73333003884f80bf4c2600a","transformType":null,"transformDefinition":null,"order":0,"parameters":[{"id":null,"name":"date_format","label":"Output Date Format","order":0,"attributes":{},"value":"NULL_OVERRIDE","type":"choice","defaultValue":null,"typeLabel":null,"mandatory":true,"choices":[{"label":"-- None --","value":"","order":1},{"label":"Custom (enter below)","value":"NULL_OVERRIDE","order":2},{"label":"ISO Date (2004-06-28)","value":"yyyy-MM-dd","order":3},{"label":"ISO Date/Time (2004-06-28T17:34:10Z)","value":"yyyy-MM-dd'T'HH:mm:ss'Z'","order":4},{"label":"ServiceNow Date/Time (2004-06-28 17:34:10)","value":"yyyy-MM-dd HH:mm:ss","order":5},{"label":"EEE, MMM dd, yyyy (Mon, Jun 28, 2004)","value":"EEE, MMM dd, yyyy","order":6},{"label":"EEE, MMM dd, yyyy h:mm a (Mon, Jun 28, 2004 5:34 PM)","value":"EEE, MMM dd, yyyy h:mm a","order":7},{"label":"MM-dd-yyyy (06-28-2004)","value":"MM-dd-yyyy","order":8},{"label":"MM-dd-yyyy h:mm a (06-28-2004 5:34 PM)","value":"MM-dd-yyyy h:mm a","order":9},{"label":"MM-dd-yyyy HH:mm:ss (06-28-2004 17:34:10)","value":"MM-dd-yyyy HH:mm:ss","order":10},{"label":"MM/dd/yyyy (06/28/2004)","value":"MM/dd/yyyy","order":11},{"label":"MM/dd/yyyy h:mm a (06/28/2004 5:34 PM)","value":"MM/dd/yyyy h:mm a","order":12},{"label":"MM/dd/yyyy HH:mm:ss (06/28/2004 15:34:10)","value":"MM/dd/yyyy HH:mm:ss","order":13},{"label":"MMM dd, yyyy (Jun 28, 2004)","value":"MMM dd, yyyy","order":14},{"label":"MMM dd, yyyy h:mm a (Jun 28, 2004 5:34 PM)","value":"MMM dd, yyyy h:mm a","order":15},{"label":"yyyy-MM-dd h:mm a (2004-06-28 5:34 PM)","value":"yyyy-MM-dd h:mm a","order":16},{"label":"yyyy/MM/dd (2004/06/28)","value":"yyyy/MM/dd","order":17},{"label":"yyyy/MM/dd h:mm a (2004/06/28 5:34 PM)","value":"yyyy/MM/dd h:mm a","order":18},{"label":"yyyy/MM/dd HH:mm:ss (2004/06/28 17:34:10)","value":"yyyy/MM/dd HH:mm:ss","order":19}]},{"id":null,"name":"custom_format","label":"Custom Format","order":1,"attributes":{},"value":"MMM","type":"string","defaultValue":"","typeLabel":null,"mandatory":false,"choices":[]}]}]</transform_compositions>
+        <transform_definition_id display_value="date_to_string">4e343e3dc73333003884f80bf4c26096</transform_definition_id>
+        <ui_id>886bb5d2-8517-4032-8b34-b7f8955aacd6</ui_id>
+    </sys_hub_pill_compound>
+    <sys_documentation action="delete_multiple" query="name=var__m_sys_hub_flow_input_d365d3132f52201022509facf699b607^sys_idNOT IN07b51f532f52201022509facf699b657,07b51f532f52201022509facf699b693,4bb51f532f52201022509facf699b65c"/>
+    <sys_documentation action="INSERT_OR_UPDATE">
+        <element>current</element>
+        <help/>
+        <hint/>
+        <label>Record</label>
+        <language>en</language>
+        <name>var__m_sys_hub_flow_input_d365d3132f52201022509facf699b607</name>
+        <plural/>
+        <sys_class_name>sys_documentation</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2021-02-18 17:36:07</sys_created_on>
+        <sys_id>07b51f532f52201022509facf699b657</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name/>
+        <sys_package display_value="NeedIt" source="x_58872_needit">6ead8e780f603200cd674f8ce1050ed1</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="NeedIt">6ead8e780f603200cd674f8ce1050ed1</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2021-02-18 17:36:07</sys_updated_on>
+        <url/>
+        <url_target/>
+    </sys_documentation>
+    <sys_documentation action="INSERT_OR_UPDATE">
+        <element>table_name</element>
+        <help/>
+        <hint/>
+        <label>Table Name</label>
+        <language>en</language>
+        <name>var__m_sys_hub_flow_input_d365d3132f52201022509facf699b607</name>
+        <plural/>
+        <sys_class_name>sys_documentation</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2021-02-18 17:36:07</sys_created_on>
+        <sys_id>07b51f532f52201022509facf699b693</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name/>
+        <sys_package display_value="NeedIt" source="x_58872_needit">6ead8e780f603200cd674f8ce1050ed1</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="NeedIt">6ead8e780f603200cd674f8ce1050ed1</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2021-02-18 17:36:07</sys_updated_on>
+        <url/>
+        <url_target/>
+    </sys_documentation>
+    <sys_documentation action="INSERT_OR_UPDATE">
+        <element>changed_fields</element>
+        <help/>
+        <hint/>
+        <label>Changed Fields</label>
+        <language>en</language>
+        <name>var__m_sys_hub_flow_input_d365d3132f52201022509facf699b607</name>
+        <plural/>
+        <sys_class_name>sys_documentation</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2021-02-18 17:36:07</sys_created_on>
+        <sys_id>4bb51f532f52201022509facf699b65c</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name/>
+        <sys_package display_value="NeedIt" source="x_58872_needit">6ead8e780f603200cd674f8ce1050ed1</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="NeedIt">6ead8e780f603200cd674f8ce1050ed1</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2021-02-18 17:36:07</sys_updated_on>
+        <url/>
+        <url_target/>
+    </sys_documentation>
+    <sys_flow_trigger_plan action="delete_multiple" query="plan_id=d365d3132f52201022509facf699b607^sys_idNOT INe2b9d7172f52201022509facf699b663"/>
+    <sys_flow_trigger_plan action="INSERT_OR_UPDATE">
+        <binding_strategy>com.snc.process_flow.engine.binding.OncePerRecord</binding_strategy>
+        <plan>{"persistor":{"@class":".ChunkingPlanPersistor","table":"sys_flow_trigger_plan","id":"e2b9d7172f52201022509facf699b663","name":"plan"}}</plan>
+        <plan_id>d365d3132f52201022509facf699b607</plan_id>
+        <snapshot>a62a5f172f52201022509facf699b67a</snapshot>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2021-02-18 17:53:33</sys_created_on>
+        <sys_domain>global</sys_domain>
+        <sys_domain_path>/</sys_domain_path>
+        <sys_id>e2b9d7172f52201022509facf699b663</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_overrides/>
+        <sys_scope/>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2021-02-18 17:53:33</sys_updated_on>
+        <trigger display_value="">66b9d7172f52201022509facf699b661</trigger>
+    </sys_flow_trigger_plan>
+    <sys_hub_flow_snapshot action="INSERT_OR_UPDATE">
+        <access>public</access>
+        <acls/>
+        <active>true</active>
+        <annotation/>
+        <callable_by_client_api>false</callable_by_client_api>
+        <category/>
+        <copied_from/>
+        <copied_from_name/>
+        <description>Aggregates daily savings into monthly savings table</description>
+        <internal_name>my_monthly_savings_aggregate</internal_name>
+        <label_cache>[{"name":"10eccc0e-1eb6-4667-aa5f-d5d9fa1c6a96.error_message","label":"1➛Error Message","reference_display":"Error Message","type":"string","base_type":"string","attributes":{"uiType":"string","uiTypeLabel":"true","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper"}},{"name":"10eccc0e-1eb6-4667-aa5f-d5d9fa1c6a96.status","label":"1➛Status","reference_display":"Status","type":"choice","base_type":"choice","attributes":{"uiType":"choice","uiTypeLabel":"true","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper"}},{"name":"10eccc0e-1eb6-4667-aa5f-d5d9fa1c6a96.table_name","label":"1➛My Monthly Savings Table","reference":"x_58872_needit_my_monthly_savings","reference_display":"My Monthly Savings","type":"table_name","base_type":"table_name","attributes":{"uiType":"table_name","uiTypeLabel":"true","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper"}},{"name":"10eccc0e-1eb6-4667-aa5f-d5d9fa1c6a96.record","label":"1➛My Monthly Savings Record","reference":"x_58872_needit_my_monthly_savings","reference_display":"My Monthly Savings","type":"reference","base_type":"reference","attributes":{"uiType":"document_id","uiTypeLabel":"true","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper"}},{"name":"Created or Updated_1.current.saving","label":"Trigger➛My Daily Savings Record➛Saving","reference":"","reference_display":"Saving","type":"string","base_type":"string","parent_table_name":"x_58872_needit_my_daily_savings","column_name":"saving"},{"name":"Created or Updated_1.current.day","label":"Trigger➛My Daily Savings Record➛Day","reference":"","reference_display":"Day","type":"glide_date","base_type":"glide_date","parent_table_name":"x_58872_needit_my_daily_savings","column_name":"day"},{"name":"Created or Updated_1.current.number","label":"Trigger➛My Daily Savings Record➛Number","reference":"","reference_display":"Number","type":"string","base_type":"string","parent_table_name":"x_58872_needit_my_daily_savings","column_name":"number"},{"name":"0944b012-6c64-4c3b-9db7-6cc05f911f15.record","label":"1➛My Daily Savings Record","reference":"x_58872_needit_my_daily_savings","reference_display":"My Daily Savings","type":"reference","base_type":"reference","attributes":{"element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper"}},{"name":"0944b012-6c64-4c3b-9db7-6cc05f911f15.table_name","label":"1➛My Daily Savings Table","reference":"x_58872_needit_my_daily_savings","reference_display":"My Daily Savings","type":"table_name","base_type":"table_name","attributes":{"element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper"}}]</label_cache>
+        <master>true</master>
+        <name>My Monthly Savings Aggregate</name>
+        <natlang/>
+        <outputs/>
+        <parent_flow display_value="My Monthly Savings Aggregate">d365d3132f52201022509facf699b607</parent_flow>
+        <remote_trigger_id/>
+        <run_as>system</run_as>
+        <run_with_roles/>
+        <sc_callable>false</sc_callable>
+        <status>published</status>
+        <sys_class_name>sys_hub_flow_snapshot</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2021-02-18 17:53:32</sys_created_on>
+        <sys_domain>global</sys_domain>
+        <sys_domain_path>/</sys_domain_path>
+        <sys_id>c6b9d7172f52201022509facf699b607</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name/>
+        <sys_overrides/>
+        <sys_package/>
+        <sys_policy/>
+        <sys_scope display_value="NeedIt">6ead8e780f603200cd674f8ce1050ed1</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2021-02-18 17:53:32</sys_updated_on>
+        <type>flow</type>
+    </sys_hub_flow_snapshot>
+    <sys_translated_text action="delete_multiple" query="documentkey=c6b9d7172f52201022509facf699b607"/>
+    <sys_variable_value action="delete_multiple" query="document_key=c6b9d7172f52201022509facf699b607"/>
+    <sys_hub_flow_component action="delete_multiple" query="flow=c6b9d7172f52201022509facf699b607^sys_idNOT IN16b9d7172f52201022509facf699b64c"/>
+    <sys_hub_action_instance action="INSERT_OR_UPDATE">
+        <action_inputs/>
+        <action_inputs/>
+        <action_type display_value="Create or Update Record">ab575ae253b3230034c6ddeeff7b12f1</action_type>
+        <action_type_parent display_value="Create or Update Record">e057d2e253b3230034c6ddeeff7b1261</action_type_parent>
+        <comment/>
+        <compiled_snapshot>ab575ae253b3230034c6ddeeff7b12f1</compiled_snapshot>
+        <display_text/>
+        <flow display_value="My Monthly Savings Aggregate">c6b9d7172f52201022509facf699b607</flow>
+        <order>1</order>
+        <parent_ui_id/>
+        <sys_class_name>sys_hub_action_instance</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2021-02-18 17:53:32</sys_created_on>
+        <sys_id>16b9d7172f52201022509facf699b64c</sys_id>
+        <sys_mod_count>2</sys_mod_count>
+        <sys_scope display_value="NeedIt">6ead8e780f603200cd674f8ce1050ed1</sys_scope>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2021-02-18 17:53:32</sys_updated_on>
+        <ui_id>10eccc0e-1eb6-4667-aa5f-d5d9fa1c6a96</ui_id>
+    </sys_hub_action_instance>
+    <sys_variable_value action="delete_multiple" query="document_key=16b9d7172f52201022509facf699b64c"/>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>sys_hub_action_instance</document>
+        <document_key>16b9d7172f52201022509facf699b64c</document_key>
+        <order>0</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2021-02-18 17:53:32</sys_created_on>
+        <sys_id>dab9d7172f52201022509facf699b64d</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2021-02-18 17:53:32</sys_updated_on>
+        <value>x_58872_needit_my_monthly_savings</value>
+        <variable display_value="">27575ae253b3230034c6ddeeff7b12f4</variable>
+    </sys_variable_value>
+    <sys_element_mapping action="delete_multiple" query="id=16b9d7172f52201022509facf699b64c"/>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>fields</field>
+        <id>16b9d7172f52201022509facf699b64c</id>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2021-02-18 17:53:32</sys_created_on>
+        <sys_id>96b9d7172f52201022509facf699b64d</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2021-02-18 17:53:32</sys_updated_on>
+        <table>var__m_sys_hub_action_input_ab575ae253b3230034c6ddeeff7b12f1</table>
+        <value>year={{fd_transform:c9ddbe22-d4fb-4e43-9ddb-0cc040881240}}^month={{fd_transform:72777a26-499e-46e3-a41a-b08528cce4c4}}^savings={{Created or Updated_1.current.saving}}</value>
+    </sys_element_mapping>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>table_name</field>
+        <id>16b9d7172f52201022509facf699b64c</id>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2021-02-18 17:53:32</sys_created_on>
+        <sys_id>5ab9d7172f52201022509facf699b64d</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2021-02-18 17:53:32</sys_updated_on>
+        <table>var__m_sys_hub_action_input_ab575ae253b3230034c6ddeeff7b12f1</table>
+        <value/>
+    </sys_element_mapping>
+    <sys_hub_trigger_instance action="delete_multiple" query="flow=c6b9d7172f52201022509facf699b607^sys_idNOT INdeb9d7172f52201022509facf699b64d"/>
+    <sys_hub_trigger_instance action="INSERT_OR_UPDATE">
+        <comment/>
+        <display_text/>
+        <flow display_value="My Monthly Savings Aggregate">c6b9d7172f52201022509facf699b607</flow>
+        <name>Created or Updated</name>
+        <remote_sys_id/>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2021-02-18 17:53:32</sys_created_on>
+        <sys_id>deb9d7172f52201022509facf699b64d</sys_id>
+        <sys_mod_count>2</sys_mod_count>
+        <sys_scope/>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2021-02-18 17:53:33</sys_updated_on>
+        <trigger_definition display_value="Created or Updated">a45d9180c32222002841b63b12d3aea7</trigger_definition>
+        <trigger_inputs/>
+        <trigger_outputs/>
+        <trigger_type>record_create_or_update</trigger_type>
+    </sys_hub_trigger_instance>
+    <sys_variable_value action="delete_multiple" query="document_key=deb9d7172f52201022509facf699b64d"/>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>sys_hub_trigger_instance</document>
+        <document_key>deb9d7172f52201022509facf699b64d</document_key>
+        <order>100</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2021-02-18 17:53:32</sys_created_on>
+        <sys_id>16b9d7172f52201022509facf699b64f</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2021-02-18 17:53:32</sys_updated_on>
+        <value>^EQ</value>
+        <variable display_value="">707dd180c32222002841b63b12d3aecb</variable>
+    </sys_variable_value>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>sys_hub_trigger_instance</document>
+        <document_key>deb9d7172f52201022509facf699b64d</document_key>
+        <order>1</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2021-02-18 17:53:32</sys_created_on>
+        <sys_id>d6b9d7172f52201022509facf699b64f</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2021-02-18 17:53:32</sys_updated_on>
+        <value>x_58872_needit_my_daily_savings</value>
+        <variable display_value="">cf1e1980c32222002841b63b12d3aea0</variable>
+    </sys_variable_value>
+    <sys_flow_cat_variable_model action="delete_multiple" query="id=c6b9d7172f52201022509facf699b607^sys_idNOT INcab9d7172f52201022509facf699b607"/>
+    <sys_flow_cat_variable_model action="INSERT_OR_UPDATE">
+        <id>c6b9d7172f52201022509facf699b607</id>
+        <name>My Monthly Savings Aggregate</name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2021-02-18 17:53:32</sys_created_on>
+        <sys_id>cab9d7172f52201022509facf699b607</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_scope/>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2021-02-18 17:53:32</sys_updated_on>
+    </sys_flow_cat_variable_model>
+    <sys_hub_flow_input action="delete_multiple" query="model=c6b9d7172f52201022509facf699b607^sys_idNOT IN12b9d7172f52201022509facf699b63b,46b9d7172f52201022509facf699b60a,96b9d7172f52201022509facf699b618"/>
+    <sys_hub_flow_input action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <array>false</array>
+        <array_denormalized>false</array_denormalized>
+        <attributes>element_mapping_provider=com.glide.flow_design.action.data.FlowDesignVariableMapper,test_input_hidden=true,uiType=table_name,uiTypeLabel=Table Name</attributes>
+        <audit>false</audit>
+        <calculation><![CDATA[(function calculatedFieldValue(current) {
+
+	// Add your code here
+	return '';  // return the calculated value
+
+})(current);]]></calculation>
+        <choice/>
+        <choice_field/>
+        <choice_table/>
+        <column_label/>
+        <comments/>
+        <create_roles/>
+        <default_value/>
+        <defaultsort/>
+        <delete_roles/>
+        <dependent/>
+        <dependent_on_field/>
+        <display>false</display>
+        <dynamic_creation>false</dynamic_creation>
+        <dynamic_creation_script/>
+        <dynamic_default_value/>
+        <dynamic_ref_qual/>
+        <element>table_name</element>
+        <element_reference>false</element_reference>
+        <foreign_database/>
+        <function_definition/>
+        <function_field>false</function_field>
+        <help/>
+        <hint/>
+        <internal_type display_value="">table_name</internal_type>
+        <label>Table Name</label>
+        <mandatory>false</mandatory>
+        <max_length>200</max_length>
+        <model display_value="My Monthly Savings Aggregate">c6b9d7172f52201022509facf699b607</model>
+        <model_id>c6b9d7172f52201022509facf699b607</model_id>
+        <model_table>sys_hub_flow_snapshot</model_table>
+        <name>var__m_sys_hub_flow_input_c6b9d7172f52201022509facf699b607</name>
+        <next_element/>
+        <order>101</order>
+        <primary>false</primary>
+        <read_only>false</read_only>
+        <read_roles/>
+        <reference/>
+        <reference_cascade_rule/>
+        <reference_floats>false</reference_floats>
+        <reference_key/>
+        <reference_qual/>
+        <reference_qual_condition/>
+        <reference_type/>
+        <sizeclass/>
+        <spell_check>false</spell_check>
+        <staged>false</staged>
+        <sys_class_name>sys_hub_flow_input</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2021-02-18 17:53:32</sys_created_on>
+        <sys_id>12b9d7172f52201022509facf699b63b</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name/>
+        <sys_package/>
+        <sys_policy/>
+        <sys_scope display_value="NeedIt">6ead8e780f603200cd674f8ce1050ed1</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2021-02-18 17:53:32</sys_updated_on>
+        <table_reference>false</table_reference>
+        <text_index>false</text_index>
+        <unique>false</unique>
+        <use_dependent_field>false</use_dependent_field>
+        <use_dynamic_default>false</use_dynamic_default>
+        <use_reference_qualifier>simple</use_reference_qualifier>
+        <virtual>false</virtual>
+        <widget/>
+        <write_roles/>
+        <xml_view>false</xml_view>
+    </sys_hub_flow_input>
+    <sys_hub_flow_input action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <array>false</array>
+        <array_denormalized>false</array_denormalized>
+        <attributes>element_mapping_provider=com.glide.flow_design.action.data.FlowDesignVariableMapper,uiType=document_id,uiTypeLabel=Document ID</attributes>
+        <audit>false</audit>
+        <calculation><![CDATA[(function calculatedFieldValue(current) {
+
+	// Add your code here
+	return '';  // return the calculated value
+
+})(current);]]></calculation>
+        <choice/>
+        <choice_field/>
+        <choice_table/>
+        <column_label/>
+        <comments/>
+        <create_roles/>
+        <default_value/>
+        <defaultsort/>
+        <delete_roles/>
+        <dependent/>
+        <dependent_on_field/>
+        <display>false</display>
+        <dynamic_creation>false</dynamic_creation>
+        <dynamic_creation_script/>
+        <dynamic_default_value/>
+        <dynamic_ref_qual/>
+        <element>current</element>
+        <element_reference>false</element_reference>
+        <foreign_database/>
+        <function_definition/>
+        <function_field>false</function_field>
+        <help/>
+        <hint/>
+        <internal_type display_value="">document_id</internal_type>
+        <label>Record</label>
+        <mandatory>true</mandatory>
+        <max_length>200</max_length>
+        <model display_value="My Monthly Savings Aggregate">c6b9d7172f52201022509facf699b607</model>
+        <model_id>c6b9d7172f52201022509facf699b607</model_id>
+        <model_table>sys_hub_flow_snapshot</model_table>
+        <name>var__m_sys_hub_flow_input_c6b9d7172f52201022509facf699b607</name>
+        <next_element/>
+        <order>100</order>
+        <primary>false</primary>
+        <read_only>false</read_only>
+        <read_roles/>
+        <reference/>
+        <reference_cascade_rule/>
+        <reference_floats>false</reference_floats>
+        <reference_key/>
+        <reference_qual/>
+        <reference_qual_condition/>
+        <reference_type/>
+        <sizeclass/>
+        <spell_check>false</spell_check>
+        <staged>false</staged>
+        <sys_class_name>sys_hub_flow_input</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2021-02-18 17:53:32</sys_created_on>
+        <sys_id>46b9d7172f52201022509facf699b60a</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name/>
+        <sys_package/>
+        <sys_policy/>
+        <sys_scope display_value="NeedIt">6ead8e780f603200cd674f8ce1050ed1</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2021-02-18 17:53:32</sys_updated_on>
+        <table_reference>false</table_reference>
+        <text_index>false</text_index>
+        <unique>false</unique>
+        <use_dependent_field>false</use_dependent_field>
+        <use_dynamic_default>false</use_dynamic_default>
+        <use_reference_qualifier>simple</use_reference_qualifier>
+        <virtual>false</virtual>
+        <widget/>
+        <write_roles/>
+        <xml_view>false</xml_view>
+    </sys_hub_flow_input>
+    <sys_hub_flow_input action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <array>false</array>
+        <array_denormalized>false</array_denormalized>
+        <attributes>child_label=FDChangeDetails,child_name=FDChangeDetails,child_type=object,child_type_label=Object,co_type_name=FD86b9d7177d522010242447405470f108,element_mapping_provider=com.glide.flow_design.action.data.FlowDesignVariableMapper,pwd2droppable=true,uiType=array.object,uiTypeLabel=Array.Object</attributes>
+        <audit>false</audit>
+        <calculation><![CDATA[(function calculatedFieldValue(current) {
+
+	// Add your code here
+	return '';  // return the calculated value
+
+})(current);]]></calculation>
+        <choice/>
+        <choice_field/>
+        <choice_table/>
+        <column_label/>
+        <comments/>
+        <create_roles/>
+        <default_value/>
+        <defaultsort/>
+        <delete_roles/>
+        <dependent/>
+        <dependent_on_field/>
+        <display>false</display>
+        <dynamic_creation>false</dynamic_creation>
+        <dynamic_creation_script/>
+        <dynamic_default_value/>
+        <dynamic_ref_qual/>
+        <element>changed_fields</element>
+        <element_reference>false</element_reference>
+        <foreign_database/>
+        <function_definition/>
+        <function_field>false</function_field>
+        <help/>
+        <hint/>
+        <internal_type display_value="String">string</internal_type>
+        <label>Changed Fields</label>
+        <mandatory>false</mandatory>
+        <max_length>4000</max_length>
+        <model display_value="My Monthly Savings Aggregate">c6b9d7172f52201022509facf699b607</model>
+        <model_id>c6b9d7172f52201022509facf699b607</model_id>
+        <model_table>sys_hub_flow_snapshot</model_table>
+        <name>var__m_sys_hub_flow_input_c6b9d7172f52201022509facf699b607</name>
+        <next_element/>
+        <order>100</order>
+        <primary>false</primary>
+        <read_only>false</read_only>
+        <read_roles/>
+        <reference/>
+        <reference_cascade_rule/>
+        <reference_floats>false</reference_floats>
+        <reference_key/>
+        <reference_qual/>
+        <reference_qual_condition/>
+        <reference_type/>
+        <sizeclass/>
+        <spell_check>false</spell_check>
+        <staged>false</staged>
+        <sys_class_name>sys_hub_flow_input</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2021-02-18 17:53:32</sys_created_on>
+        <sys_id>96b9d7172f52201022509facf699b618</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name/>
+        <sys_package/>
+        <sys_policy/>
+        <sys_scope display_value="NeedIt">6ead8e780f603200cd674f8ce1050ed1</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2021-02-18 17:53:32</sys_updated_on>
+        <table_reference>false</table_reference>
+        <text_index>false</text_index>
+        <unique>false</unique>
+        <use_dependent_field>false</use_dependent_field>
+        <use_dynamic_default>false</use_dynamic_default>
+        <use_reference_qualifier>simple</use_reference_qualifier>
+        <virtual>false</virtual>
+        <widget/>
+        <write_roles/>
+        <xml_view>false</xml_view>
+    </sys_hub_flow_input>
+    <sys_hub_action_instance action="delete_multiple" query="flow=c6b9d7172f52201022509facf699b607^sys_idNOT IN16b9d7172f52201022509facf699b64c"/>
+    <sys_hub_action_instance action="INSERT_OR_UPDATE">
+        <action_inputs/>
+        <action_inputs/>
+        <action_type display_value="Create or Update Record">ab575ae253b3230034c6ddeeff7b12f1</action_type>
+        <action_type_parent display_value="Create or Update Record">e057d2e253b3230034c6ddeeff7b1261</action_type_parent>
+        <comment/>
+        <compiled_snapshot>ab575ae253b3230034c6ddeeff7b12f1</compiled_snapshot>
+        <display_text/>
+        <flow display_value="My Monthly Savings Aggregate">c6b9d7172f52201022509facf699b607</flow>
+        <order>1</order>
+        <parent_ui_id/>
+        <sys_class_name>sys_hub_action_instance</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2021-02-18 17:53:32</sys_created_on>
+        <sys_id>16b9d7172f52201022509facf699b64c</sys_id>
+        <sys_mod_count>2</sys_mod_count>
+        <sys_scope display_value="NeedIt">6ead8e780f603200cd674f8ce1050ed1</sys_scope>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2021-02-18 17:53:32</sys_updated_on>
+        <ui_id>10eccc0e-1eb6-4667-aa5f-d5d9fa1c6a96</ui_id>
+    </sys_hub_action_instance>
+    <sys_variable_value action="delete_multiple" query="document_key=16b9d7172f52201022509facf699b64c"/>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>sys_hub_action_instance</document>
+        <document_key>16b9d7172f52201022509facf699b64c</document_key>
+        <order>0</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2021-02-18 17:53:32</sys_created_on>
+        <sys_id>dab9d7172f52201022509facf699b64d</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2021-02-18 17:53:32</sys_updated_on>
+        <value>x_58872_needit_my_monthly_savings</value>
+        <variable display_value="">27575ae253b3230034c6ddeeff7b12f4</variable>
+    </sys_variable_value>
+    <sys_element_mapping action="delete_multiple" query="id=16b9d7172f52201022509facf699b64c"/>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>fields</field>
+        <id>16b9d7172f52201022509facf699b64c</id>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2021-02-18 17:53:32</sys_created_on>
+        <sys_id>96b9d7172f52201022509facf699b64d</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2021-02-18 17:53:32</sys_updated_on>
+        <table>var__m_sys_hub_action_input_ab575ae253b3230034c6ddeeff7b12f1</table>
+        <value>year={{fd_transform:c9ddbe22-d4fb-4e43-9ddb-0cc040881240}}^month={{fd_transform:72777a26-499e-46e3-a41a-b08528cce4c4}}^savings={{Created or Updated_1.current.saving}}</value>
+    </sys_element_mapping>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>table_name</field>
+        <id>16b9d7172f52201022509facf699b64c</id>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2021-02-18 17:53:32</sys_created_on>
+        <sys_id>5ab9d7172f52201022509facf699b64d</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2021-02-18 17:53:32</sys_updated_on>
+        <table>var__m_sys_hub_action_input_ab575ae253b3230034c6ddeeff7b12f1</table>
+        <value/>
+    </sys_element_mapping>
+    <sys_hub_input_scripts action="delete_multiple" query="instance=16b9d7172f52201022509facf699b64c^sys_idNOT IN92b9d7172f52201022509facf699b64d"/>
+    <sys_hub_input_scripts action="INSERT_OR_UPDATE">
+        <active>false</active>
+        <input_name>fields</input_name>
+        <instance>16b9d7172f52201022509facf699b64c</instance>
+        <referenced_table>sys_hub_action_instance</referenced_table>
+        <script>{"savings":{"scriptActive":false,"savedValue":"{{Created or Updated_1.current.saving}}"}}</script>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2021-02-18 17:53:32</sys_created_on>
+        <sys_id>92b9d7172f52201022509facf699b64d</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2021-02-18 17:53:32</sys_updated_on>
+    </sys_hub_input_scripts>
+    <sys_hub_pill_compound action="delete_multiple" query="attached_to=c6b9d7172f52201022509facf699b607^sys_idNOT IN12b9d7172f52201022509facf699b650,16b9d7172f52201022509facf699b650,1ab9d7172f52201022509facf699b650,1eb9d7172f52201022509facf699b64f,1eb9d7172f52201022509facf699b650,92b9d7172f52201022509facf699b650,96b9d7172f52201022509facf699b650,9ab9d7172f52201022509facf699b64f,9ab9d7172f52201022509facf699b650,9eb9d7172f52201022509facf699b64f,9eb9d7172f52201022509facf699b650"/>
+    <sys_hub_pill_compound action="INSERT_OR_UPDATE">
+        <attached_to>c6b9d7172f52201022509facf699b607</attached_to>
+        <extra_info/>
+        <order>0</order>
+        <prescription>{{Created or Updated_1.current.day}}</prescription>
+        <source_ui_id/>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2021-02-18 17:53:32</sys_created_on>
+        <sys_id>12b9d7172f52201022509facf699b650</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_scope display_value="NeedIt">6ead8e780f603200cd674f8ce1050ed1</sys_scope>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2021-02-18 17:53:32</sys_updated_on>
+        <transform_compositions>[]</transform_compositions>
+        <transform_definition_id/>
+        <ui_id>0c5e000f-17d8-4bce-9421-d287b2fc6107</ui_id>
+    </sys_hub_pill_compound>
+    <sys_hub_pill_compound action="INSERT_OR_UPDATE">
+        <attached_to>c6b9d7172f52201022509facf699b607</attached_to>
+        <extra_info/>
+        <order>1</order>
+        <prescription/>
+        <source_ui_id>c9ddbe22-d4fb-4e43-9ddb-0cc040881240</source_ui_id>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2021-02-18 17:53:32</sys_created_on>
+        <sys_id>16b9d7172f52201022509facf699b650</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_scope display_value="NeedIt">6ead8e780f603200cd674f8ce1050ed1</sys_scope>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2021-02-18 17:53:32</sys_updated_on>
+        <transform_compositions>[{"id":"5094327dc73333003884f80bf4c2600a","transformType":null,"transformDefinition":null,"order":0,"parameters":[{"id":null,"name":"date_format","label":"Output Date Format","order":0,"attributes":{},"value":"NULL_OVERRIDE","type":"choice","defaultValue":null,"typeLabel":null,"mandatory":true,"choices":[{"label":"-- None --","value":"","order":1},{"label":"Custom (enter below)","value":"NULL_OVERRIDE","order":2},{"label":"ISO Date (2004-06-28)","value":"yyyy-MM-dd","order":3},{"label":"ISO Date/Time (2004-06-28T17:34:10Z)","value":"yyyy-MM-dd'T'HH:mm:ss'Z'","order":4},{"label":"ServiceNow Date/Time (2004-06-28 17:34:10)","value":"yyyy-MM-dd HH:mm:ss","order":5},{"label":"EEE, MMM dd, yyyy (Mon, Jun 28, 2004)","value":"EEE, MMM dd, yyyy","order":6},{"label":"EEE, MMM dd, yyyy h:mm a (Mon, Jun 28, 2004 5:34 PM)","value":"EEE, MMM dd, yyyy h:mm a","order":7},{"label":"MM-dd-yyyy (06-28-2004)","value":"MM-dd-yyyy","order":8},{"label":"MM-dd-yyyy h:mm a (06-28-2004 5:34 PM)","value":"MM-dd-yyyy h:mm a","order":9},{"label":"MM-dd-yyyy HH:mm:ss (06-28-2004 17:34:10)","value":"MM-dd-yyyy HH:mm:ss","order":10},{"label":"MM/dd/yyyy (06/28/2004)","value":"MM/dd/yyyy","order":11},{"label":"MM/dd/yyyy h:mm a (06/28/2004 5:34 PM)","value":"MM/dd/yyyy h:mm a","order":12},{"label":"MM/dd/yyyy HH:mm:ss (06/28/2004 15:34:10)","value":"MM/dd/yyyy HH:mm:ss","order":13},{"label":"MMM dd, yyyy (Jun 28, 2004)","value":"MMM dd, yyyy","order":14},{"label":"MMM dd, yyyy h:mm a (Jun 28, 2004 5:34 PM)","value":"MMM dd, yyyy h:mm a","order":15},{"label":"yyyy-MM-dd h:mm a (2004-06-28 5:34 PM)","value":"yyyy-MM-dd h:mm a","order":16},{"label":"yyyy/MM/dd (2004/06/28)","value":"yyyy/MM/dd","order":17},{"label":"yyyy/MM/dd h:mm a (2004/06/28 5:34 PM)","value":"yyyy/MM/dd h:mm a","order":18},{"label":"yyyy/MM/dd HH:mm:ss (2004/06/28 17:34:10)","value":"yyyy/MM/dd HH:mm:ss","order":19}]},{"id":null,"name":"custom_format","label":"Custom Format","order":1,"attributes":{},"value":"y","type":"string","defaultValue":"","typeLabel":null,"mandatory":false,"choices":[]}]}]</transform_compositions>
+        <transform_definition_id display_value="date_to_string">4e343e3dc73333003884f80bf4c26096</transform_definition_id>
+        <ui_id>d24ab75b-60c6-4ab0-9b6e-0c8955949ae2</ui_id>
+    </sys_hub_pill_compound>
+    <sys_hub_pill_compound action="INSERT_OR_UPDATE">
+        <attached_to>c6b9d7172f52201022509facf699b607</attached_to>
+        <extra_info/>
+        <order>1</order>
+        <prescription/>
+        <source_ui_id>72777a26-499e-46e3-a41a-b08528cce4c4</source_ui_id>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2021-02-18 17:53:32</sys_created_on>
+        <sys_id>1ab9d7172f52201022509facf699b650</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_scope display_value="NeedIt">6ead8e780f603200cd674f8ce1050ed1</sys_scope>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2021-02-18 17:53:32</sys_updated_on>
+        <transform_compositions>[{"id":"5094327dc73333003884f80bf4c2600a","transformType":null,"transformDefinition":null,"order":0,"parameters":[{"id":null,"name":"date_format","label":"Output Date Format","order":0,"attributes":{},"value":"NULL_OVERRIDE","type":"choice","defaultValue":null,"typeLabel":null,"mandatory":true,"choices":[{"label":"-- None --","value":"","order":1},{"label":"Custom (enter below)","value":"NULL_OVERRIDE","order":2},{"label":"ISO Date (2004-06-28)","value":"yyyy-MM-dd","order":3},{"label":"ISO Date/Time (2004-06-28T17:34:10Z)","value":"yyyy-MM-dd'T'HH:mm:ss'Z'","order":4},{"label":"ServiceNow Date/Time (2004-06-28 17:34:10)","value":"yyyy-MM-dd HH:mm:ss","order":5},{"label":"EEE, MMM dd, yyyy (Mon, Jun 28, 2004)","value":"EEE, MMM dd, yyyy","order":6},{"label":"EEE, MMM dd, yyyy h:mm a (Mon, Jun 28, 2004 5:34 PM)","value":"EEE, MMM dd, yyyy h:mm a","order":7},{"label":"MM-dd-yyyy (06-28-2004)","value":"MM-dd-yyyy","order":8},{"label":"MM-dd-yyyy h:mm a (06-28-2004 5:34 PM)","value":"MM-dd-yyyy h:mm a","order":9},{"label":"MM-dd-yyyy HH:mm:ss (06-28-2004 17:34:10)","value":"MM-dd-yyyy HH:mm:ss","order":10},{"label":"MM/dd/yyyy (06/28/2004)","value":"MM/dd/yyyy","order":11},{"label":"MM/dd/yyyy h:mm a (06/28/2004 5:34 PM)","value":"MM/dd/yyyy h:mm a","order":12},{"label":"MM/dd/yyyy HH:mm:ss (06/28/2004 15:34:10)","value":"MM/dd/yyyy HH:mm:ss","order":13},{"label":"MMM dd, yyyy (Jun 28, 2004)","value":"MMM dd, yyyy","order":14},{"label":"MMM dd, yyyy h:mm a (Jun 28, 2004 5:34 PM)","value":"MMM dd, yyyy h:mm a","order":15},{"label":"yyyy-MM-dd h:mm a (2004-06-28 5:34 PM)","value":"yyyy-MM-dd h:mm a","order":16},{"label":"yyyy/MM/dd (2004/06/28)","value":"yyyy/MM/dd","order":17},{"label":"yyyy/MM/dd h:mm a (2004/06/28 5:34 PM)","value":"yyyy/MM/dd h:mm a","order":18},{"label":"yyyy/MM/dd HH:mm:ss (2004/06/28 17:34:10)","value":"yyyy/MM/dd HH:mm:ss","order":19}]},{"id":null,"name":"custom_format","label":"Custom Format","order":1,"attributes":{},"value":"MMM","type":"string","defaultValue":"","typeLabel":null,"mandatory":false,"choices":[]}]}]</transform_compositions>
+        <transform_definition_id display_value="date_to_string">4e343e3dc73333003884f80bf4c26096</transform_definition_id>
+        <ui_id>110ea563-6db7-4105-ace9-f5d451494e1d</ui_id>
+    </sys_hub_pill_compound>
+    <sys_hub_pill_compound action="INSERT_OR_UPDATE">
+        <attached_to>c6b9d7172f52201022509facf699b607</attached_to>
+        <extra_info/>
+        <order>1</order>
+        <prescription/>
+        <source_ui_id>07bbfa40-bf67-418c-87af-6d110d422e4d</source_ui_id>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2021-02-18 17:53:32</sys_created_on>
+        <sys_id>1eb9d7172f52201022509facf699b64f</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_scope display_value="NeedIt">6ead8e780f603200cd674f8ce1050ed1</sys_scope>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2021-02-18 17:53:32</sys_updated_on>
+        <transform_compositions>[{"id":"5094327dc73333003884f80bf4c2600a","transformType":null,"transformDefinition":null,"order":0,"parameters":[{"id":null,"name":"date_format","label":"Output Date Format","order":0,"attributes":{},"value":"NULL_OVERRIDE","type":"choice","defaultValue":null,"typeLabel":null,"mandatory":true,"choices":[{"label":"-- None --","value":"","order":1},{"label":"Custom (enter below)","value":"NULL_OVERRIDE","order":2},{"label":"ISO Date (2004-06-28)","value":"yyyy-MM-dd","order":3},{"label":"ISO Date/Time (2004-06-28T17:34:10Z)","value":"yyyy-MM-dd'T'HH:mm:ss'Z'","order":4},{"label":"ServiceNow Date/Time (2004-06-28 17:34:10)","value":"yyyy-MM-dd HH:mm:ss","order":5},{"label":"EEE, MMM dd, yyyy (Mon, Jun 28, 2004)","value":"EEE, MMM dd, yyyy","order":6},{"label":"EEE, MMM dd, yyyy h:mm a (Mon, Jun 28, 2004 5:34 PM)","value":"EEE, MMM dd, yyyy h:mm a","order":7},{"label":"MM-dd-yyyy (06-28-2004)","value":"MM-dd-yyyy","order":8},{"label":"MM-dd-yyyy h:mm a (06-28-2004 5:34 PM)","value":"MM-dd-yyyy h:mm a","order":9},{"label":"MM-dd-yyyy HH:mm:ss (06-28-2004 17:34:10)","value":"MM-dd-yyyy HH:mm:ss","order":10},{"label":"MM/dd/yyyy (06/28/2004)","value":"MM/dd/yyyy","order":11},{"label":"MM/dd/yyyy h:mm a (06/28/2004 5:34 PM)","value":"MM/dd/yyyy h:mm a","order":12},{"label":"MM/dd/yyyy HH:mm:ss (06/28/2004 15:34:10)","value":"MM/dd/yyyy HH:mm:ss","order":13},{"label":"MMM dd, yyyy (Jun 28, 2004)","value":"MMM dd, yyyy","order":14},{"label":"MMM dd, yyyy h:mm a (Jun 28, 2004 5:34 PM)","value":"MMM dd, yyyy h:mm a","order":15},{"label":"yyyy-MM-dd h:mm a (2004-06-28 5:34 PM)","value":"yyyy-MM-dd h:mm a","order":16},{"label":"yyyy/MM/dd (2004/06/28)","value":"yyyy/MM/dd","order":17},{"label":"yyyy/MM/dd h:mm a (2004/06/28 5:34 PM)","value":"yyyy/MM/dd h:mm a","order":18},{"label":"yyyy/MM/dd HH:mm:ss (2004/06/28 17:34:10)","value":"yyyy/MM/dd HH:mm:ss","order":19}]},{"id":null,"name":"custom_format","label":"Custom Format","order":1,"attributes":{},"value":"MMM","type":"string","defaultValue":"","typeLabel":null,"mandatory":false,"choices":[]}]}]</transform_compositions>
+        <transform_definition_id display_value="date_to_string">4e343e3dc73333003884f80bf4c26096</transform_definition_id>
+        <ui_id>33da5a0b-664b-478d-9bfb-45204637f75f</ui_id>
+    </sys_hub_pill_compound>
+    <sys_hub_pill_compound action="INSERT_OR_UPDATE">
+        <attached_to>c6b9d7172f52201022509facf699b607</attached_to>
+        <extra_info/>
+        <order>0</order>
+        <prescription>{{Created or Updated_1.current.day}}</prescription>
+        <source_ui_id/>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2021-02-18 17:53:32</sys_created_on>
+        <sys_id>1eb9d7172f52201022509facf699b650</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_scope display_value="NeedIt">6ead8e780f603200cd674f8ce1050ed1</sys_scope>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2021-02-18 17:53:32</sys_updated_on>
+        <transform_compositions>[]</transform_compositions>
+        <transform_definition_id/>
+        <ui_id>07bbfa40-bf67-418c-87af-6d110d422e4d</ui_id>
+    </sys_hub_pill_compound>
+    <sys_hub_pill_compound action="INSERT_OR_UPDATE">
+        <attached_to>c6b9d7172f52201022509facf699b607</attached_to>
+        <extra_info/>
+        <order>0</order>
+        <prescription>{{Created or Updated_1.current.day}}</prescription>
+        <source_ui_id/>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2021-02-18 17:53:32</sys_created_on>
+        <sys_id>92b9d7172f52201022509facf699b650</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_scope display_value="NeedIt">6ead8e780f603200cd674f8ce1050ed1</sys_scope>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2021-02-18 17:53:32</sys_updated_on>
+        <transform_compositions>[]</transform_compositions>
+        <transform_definition_id/>
+        <ui_id>c9ddbe22-d4fb-4e43-9ddb-0cc040881240</ui_id>
+    </sys_hub_pill_compound>
+    <sys_hub_pill_compound action="INSERT_OR_UPDATE">
+        <attached_to>c6b9d7172f52201022509facf699b607</attached_to>
+        <extra_info/>
+        <order>0</order>
+        <prescription>{{Created or Updated_1.current.day}}</prescription>
+        <source_ui_id/>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2021-02-18 17:53:32</sys_created_on>
+        <sys_id>96b9d7172f52201022509facf699b650</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_scope display_value="NeedIt">6ead8e780f603200cd674f8ce1050ed1</sys_scope>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2021-02-18 17:53:32</sys_updated_on>
+        <transform_compositions>[]</transform_compositions>
+        <transform_definition_id/>
+        <ui_id>72777a26-499e-46e3-a41a-b08528cce4c4</ui_id>
+    </sys_hub_pill_compound>
+    <sys_hub_pill_compound action="INSERT_OR_UPDATE">
+        <attached_to>c6b9d7172f52201022509facf699b607</attached_to>
+        <extra_info/>
+        <order>2</order>
+        <prescription/>
+        <source_ui_id>0c5e000f-17d8-4bce-9421-d287b2fc6107</source_ui_id>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2021-02-18 17:53:32</sys_created_on>
+        <sys_id>9ab9d7172f52201022509facf699b64f</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_scope display_value="NeedIt">6ead8e780f603200cd674f8ce1050ed1</sys_scope>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2021-02-18 17:53:32</sys_updated_on>
+        <transform_compositions>[{"id":"5094327dc73333003884f80bf4c2600a","transformType":null,"transformDefinition":null,"order":0,"parameters":[{"id":null,"name":"date_format","label":"Output Date Format","order":0,"attributes":{},"value":"NULL_OVERRIDE","type":"choice","defaultValue":null,"typeLabel":null,"mandatory":true,"choices":[{"label":"-- None --","value":"","order":1},{"label":"Custom (enter below)","value":"NULL_OVERRIDE","order":2},{"label":"ISO Date (2004-06-28)","value":"yyyy-MM-dd","order":3},{"label":"ISO Date/Time (2004-06-28T17:34:10Z)","value":"yyyy-MM-dd'T'HH:mm:ss'Z'","order":4},{"label":"ServiceNow Date/Time (2004-06-28 17:34:10)","value":"yyyy-MM-dd HH:mm:ss","order":5},{"label":"EEE, MMM dd, yyyy (Mon, Jun 28, 2004)","value":"EEE, MMM dd, yyyy","order":6},{"label":"EEE, MMM dd, yyyy h:mm a (Mon, Jun 28, 2004 5:34 PM)","value":"EEE, MMM dd, yyyy h:mm a","order":7},{"label":"MM-dd-yyyy (06-28-2004)","value":"MM-dd-yyyy","order":8},{"label":"MM-dd-yyyy h:mm a (06-28-2004 5:34 PM)","value":"MM-dd-yyyy h:mm a","order":9},{"label":"MM-dd-yyyy HH:mm:ss (06-28-2004 17:34:10)","value":"MM-dd-yyyy HH:mm:ss","order":10},{"label":"MM/dd/yyyy (06/28/2004)","value":"MM/dd/yyyy","order":11},{"label":"MM/dd/yyyy h:mm a (06/28/2004 5:34 PM)","value":"MM/dd/yyyy h:mm a","order":12},{"label":"MM/dd/yyyy HH:mm:ss (06/28/2004 15:34:10)","value":"MM/dd/yyyy HH:mm:ss","order":13},{"label":"MMM dd, yyyy (Jun 28, 2004)","value":"MMM dd, yyyy","order":14},{"label":"MMM dd, yyyy h:mm a (Jun 28, 2004 5:34 PM)","value":"MMM dd, yyyy h:mm a","order":15},{"label":"yyyy-MM-dd h:mm a (2004-06-28 5:34 PM)","value":"yyyy-MM-dd h:mm a","order":16},{"label":"yyyy/MM/dd (2004/06/28)","value":"yyyy/MM/dd","order":17},{"label":"yyyy/MM/dd h:mm a (2004/06/28 5:34 PM)","value":"yyyy/MM/dd h:mm a","order":18},{"label":"yyyy/MM/dd HH:mm:ss (2004/06/28 17:34:10)","value":"yyyy/MM/dd HH:mm:ss","order":19}]},{"id":null,"name":"custom_format","label":"Custom Format","order":1,"attributes":{},"value":"MMM","type":"string","defaultValue":"","typeLabel":null,"mandatory":false,"choices":[]}]}]</transform_compositions>
+        <transform_definition_id display_value="date_to_string">4e343e3dc73333003884f80bf4c26096</transform_definition_id>
+        <ui_id>86210ad0-8d8a-425a-88a9-34f7fd6d8c41</ui_id>
+    </sys_hub_pill_compound>
+    <sys_hub_pill_compound action="INSERT_OR_UPDATE">
+        <attached_to>c6b9d7172f52201022509facf699b607</attached_to>
+        <extra_info/>
+        <order>1</order>
+        <prescription/>
+        <source_ui_id>9deed29d-b2e1-455f-9062-cbc3155f95ec</source_ui_id>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2021-02-18 17:53:32</sys_created_on>
+        <sys_id>9ab9d7172f52201022509facf699b650</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_scope display_value="NeedIt">6ead8e780f603200cd674f8ce1050ed1</sys_scope>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2021-02-18 17:53:32</sys_updated_on>
+        <transform_compositions>[{"id":"5094327dc73333003884f80bf4c2600a","transformType":null,"transformDefinition":null,"order":0,"parameters":[{"id":null,"name":"date_format","label":"Output Date Format","order":0,"attributes":{},"value":"NULL_OVERRIDE","type":"choice","defaultValue":null,"typeLabel":null,"mandatory":true,"choices":[{"label":"-- None --","value":"","order":1},{"label":"Custom (enter below)","value":"NULL_OVERRIDE","order":2},{"label":"ISO Date (2004-06-28)","value":"yyyy-MM-dd","order":3},{"label":"ISO Date/Time (2004-06-28T17:34:10Z)","value":"yyyy-MM-dd'T'HH:mm:ss'Z'","order":4},{"label":"ServiceNow Date/Time (2004-06-28 17:34:10)","value":"yyyy-MM-dd HH:mm:ss","order":5},{"label":"EEE, MMM dd, yyyy (Mon, Jun 28, 2004)","value":"EEE, MMM dd, yyyy","order":6},{"label":"EEE, MMM dd, yyyy h:mm a (Mon, Jun 28, 2004 5:34 PM)","value":"EEE, MMM dd, yyyy h:mm a","order":7},{"label":"MM-dd-yyyy (06-28-2004)","value":"MM-dd-yyyy","order":8},{"label":"MM-dd-yyyy h:mm a (06-28-2004 5:34 PM)","value":"MM-dd-yyyy h:mm a","order":9},{"label":"MM-dd-yyyy HH:mm:ss (06-28-2004 17:34:10)","value":"MM-dd-yyyy HH:mm:ss","order":10},{"label":"MM/dd/yyyy (06/28/2004)","value":"MM/dd/yyyy","order":11},{"label":"MM/dd/yyyy h:mm a (06/28/2004 5:34 PM)","value":"MM/dd/yyyy h:mm a","order":12},{"label":"MM/dd/yyyy HH:mm:ss (06/28/2004 15:34:10)","value":"MM/dd/yyyy HH:mm:ss","order":13},{"label":"MMM dd, yyyy (Jun 28, 2004)","value":"MMM dd, yyyy","order":14},{"label":"MMM dd, yyyy h:mm a (Jun 28, 2004 5:34 PM)","value":"MMM dd, yyyy h:mm a","order":15},{"label":"yyyy-MM-dd h:mm a (2004-06-28 5:34 PM)","value":"yyyy-MM-dd h:mm a","order":16},{"label":"yyyy/MM/dd (2004/06/28)","value":"yyyy/MM/dd","order":17},{"label":"yyyy/MM/dd h:mm a (2004/06/28 5:34 PM)","value":"yyyy/MM/dd h:mm a","order":18},{"label":"yyyy/MM/dd HH:mm:ss (2004/06/28 17:34:10)","value":"yyyy/MM/dd HH:mm:ss","order":19}]},{"id":null,"name":"custom_format","label":"Custom Format","order":1,"attributes":{},"value":"yyyy","type":"string","defaultValue":"","typeLabel":null,"mandatory":false,"choices":[]}]}]</transform_compositions>
+        <transform_definition_id display_value="date_to_string">4e343e3dc73333003884f80bf4c26096</transform_definition_id>
+        <ui_id>57f1b9f4-a51b-4588-b9ae-595f56261b83</ui_id>
+    </sys_hub_pill_compound>
+    <sys_hub_pill_compound action="INSERT_OR_UPDATE">
+        <attached_to>c6b9d7172f52201022509facf699b607</attached_to>
+        <extra_info/>
+        <order>0</order>
+        <prescription>{{Created or Updated_1.current.day}}</prescription>
+        <source_ui_id/>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2021-02-18 17:53:32</sys_created_on>
+        <sys_id>9eb9d7172f52201022509facf699b64f</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_scope display_value="NeedIt">6ead8e780f603200cd674f8ce1050ed1</sys_scope>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2021-02-18 17:53:32</sys_updated_on>
+        <transform_compositions>[]</transform_compositions>
+        <transform_definition_id/>
+        <ui_id>9deed29d-b2e1-455f-9062-cbc3155f95ec</ui_id>
+    </sys_hub_pill_compound>
+    <sys_hub_pill_compound action="INSERT_OR_UPDATE">
+        <attached_to>c6b9d7172f52201022509facf699b607</attached_to>
+        <extra_info/>
+        <order>1</order>
+        <prescription/>
+        <source_ui_id>0c5e000f-17d8-4bce-9421-d287b2fc6107</source_ui_id>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2021-02-18 17:53:32</sys_created_on>
+        <sys_id>9eb9d7172f52201022509facf699b650</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_scope display_value="NeedIt">6ead8e780f603200cd674f8ce1050ed1</sys_scope>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2021-02-18 17:53:32</sys_updated_on>
+        <transform_compositions>[{"id":"5094327dc73333003884f80bf4c2600a","transformType":null,"transformDefinition":null,"order":0,"parameters":[{"id":null,"name":"date_format","label":"Output Date Format","order":0,"attributes":{},"value":"NULL_OVERRIDE","type":"choice","defaultValue":null,"typeLabel":null,"mandatory":true,"choices":[{"label":"-- None --","value":"","order":1},{"label":"Custom (enter below)","value":"NULL_OVERRIDE","order":2},{"label":"ISO Date (2004-06-28)","value":"yyyy-MM-dd","order":3},{"label":"ISO Date/Time (2004-06-28T17:34:10Z)","value":"yyyy-MM-dd'T'HH:mm:ss'Z'","order":4},{"label":"ServiceNow Date/Time (2004-06-28 17:34:10)","value":"yyyy-MM-dd HH:mm:ss","order":5},{"label":"EEE, MMM dd, yyyy (Mon, Jun 28, 2004)","value":"EEE, MMM dd, yyyy","order":6},{"label":"EEE, MMM dd, yyyy h:mm a (Mon, Jun 28, 2004 5:34 PM)","value":"EEE, MMM dd, yyyy h:mm a","order":7},{"label":"MM-dd-yyyy (06-28-2004)","value":"MM-dd-yyyy","order":8},{"label":"MM-dd-yyyy h:mm a (06-28-2004 5:34 PM)","value":"MM-dd-yyyy h:mm a","order":9},{"label":"MM-dd-yyyy HH:mm:ss (06-28-2004 17:34:10)","value":"MM-dd-yyyy HH:mm:ss","order":10},{"label":"MM/dd/yyyy (06/28/2004)","value":"MM/dd/yyyy","order":11},{"label":"MM/dd/yyyy h:mm a (06/28/2004 5:34 PM)","value":"MM/dd/yyyy h:mm a","order":12},{"label":"MM/dd/yyyy HH:mm:ss (06/28/2004 15:34:10)","value":"MM/dd/yyyy HH:mm:ss","order":13},{"label":"MMM dd, yyyy (Jun 28, 2004)","value":"MMM dd, yyyy","order":14},{"label":"MMM dd, yyyy h:mm a (Jun 28, 2004 5:34 PM)","value":"MMM dd, yyyy h:mm a","order":15},{"label":"yyyy-MM-dd h:mm a (2004-06-28 5:34 PM)","value":"yyyy-MM-dd h:mm a","order":16},{"label":"yyyy/MM/dd (2004/06/28)","value":"yyyy/MM/dd","order":17},{"label":"yyyy/MM/dd h:mm a (2004/06/28 5:34 PM)","value":"yyyy/MM/dd h:mm a","order":18},{"label":"yyyy/MM/dd HH:mm:ss (2004/06/28 17:34:10)","value":"yyyy/MM/dd HH:mm:ss","order":19}]},{"id":null,"name":"custom_format","label":"Custom Format","order":1,"attributes":{},"value":"MMM","type":"string","defaultValue":"","typeLabel":null,"mandatory":false,"choices":[]}]}]</transform_compositions>
+        <transform_definition_id display_value="date_to_string">4e343e3dc73333003884f80bf4c26096</transform_definition_id>
+        <ui_id>dd43e1de-b919-471a-9200-524935b21f01</ui_id>
+    </sys_hub_pill_compound>
+    <sys_documentation action="delete_multiple" query="name=var__m_sys_hub_flow_input_c6b9d7172f52201022509facf699b607^sys_idNOT IN5ab9d7172f52201022509facf699b614,d2b9d7172f52201022509facf699b637,dab9d7172f52201022509facf699b640"/>
+    <sys_documentation action="INSERT_OR_UPDATE">
+        <element>current</element>
+        <help/>
+        <hint/>
+        <label>Record</label>
+        <language>en</language>
+        <name>var__m_sys_hub_flow_input_c6b9d7172f52201022509facf699b607</name>
+        <plural/>
+        <sys_class_name>sys_documentation</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2021-02-18 17:53:32</sys_created_on>
+        <sys_id>5ab9d7172f52201022509facf699b614</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name/>
+        <sys_package display_value="NeedIt" source="x_58872_needit">6ead8e780f603200cd674f8ce1050ed1</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="NeedIt">6ead8e780f603200cd674f8ce1050ed1</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2021-02-18 17:53:32</sys_updated_on>
+        <url/>
+        <url_target/>
+    </sys_documentation>
+    <sys_documentation action="INSERT_OR_UPDATE">
+        <element>changed_fields</element>
+        <help/>
+        <hint/>
+        <label>Changed Fields</label>
+        <language>en</language>
+        <name>var__m_sys_hub_flow_input_c6b9d7172f52201022509facf699b607</name>
+        <plural/>
+        <sys_class_name>sys_documentation</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2021-02-18 17:53:32</sys_created_on>
+        <sys_id>d2b9d7172f52201022509facf699b637</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name/>
+        <sys_package display_value="NeedIt" source="x_58872_needit">6ead8e780f603200cd674f8ce1050ed1</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="NeedIt">6ead8e780f603200cd674f8ce1050ed1</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2021-02-18 17:53:32</sys_updated_on>
+        <url/>
+        <url_target/>
+    </sys_documentation>
+    <sys_documentation action="INSERT_OR_UPDATE">
+        <element>table_name</element>
+        <help/>
+        <hint/>
+        <label>Table Name</label>
+        <language>en</language>
+        <name>var__m_sys_hub_flow_input_c6b9d7172f52201022509facf699b607</name>
+        <plural/>
+        <sys_class_name>sys_documentation</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2021-02-18 17:53:32</sys_created_on>
+        <sys_id>dab9d7172f52201022509facf699b640</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name/>
+        <sys_package display_value="NeedIt" source="x_58872_needit">6ead8e780f603200cd674f8ce1050ed1</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="NeedIt">6ead8e780f603200cd674f8ce1050ed1</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2021-02-18 17:53:32</sys_updated_on>
+        <url/>
+        <url_target/>
+    </sys_documentation>
+</record_update>
